@@ -9,8 +9,10 @@
 <script>
 export default {
     name:"facebookLogin",
-    created: function () {
-        window.fbAsyncInit = function() {
+    mounted () {
+        let _this = this
+        this.$nextTick(() => {
+        window.fbAsyncInit = function () {
             window.FB.init({
                 appId: "210799246921372", //You will need to change this
                 cookie: true, // This is important, it's not enabled by default
@@ -18,19 +20,18 @@ export default {
                 xfbml : true,
                 version: "v13.0"
             })
-
-            window.FB.getLoginStatus(function(response) {
-                console.log(response)
-            })
-        }
-
-        (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+            window.FB.AppEvents.logPageView()
+            _this.FB = window.FB
+            console.log('FB SDK was initialized as mixin')
+        };
+        (function (d, s, id) {
+            let js, fjs = d.getElementsByTagName(s)[0]
+            if (d.getElementById(id)) { return }
+            js = d.createElement(s); js.id = id
+            js.src = '//connect.facebook.net/en_US/sdk.js'
+            fjs.parentNode.insertBefore(js, fjs)
+            }(document, 'script', 'facebook-jssdk'))
+        })
     },
     methods: {
         logInWithFacebook () {
