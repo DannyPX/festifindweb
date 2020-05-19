@@ -5,7 +5,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 .subtitle {
   position: absolute;
   width: 207.77px;

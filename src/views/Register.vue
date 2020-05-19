@@ -33,7 +33,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 .form-check-label{
   max-width: 180px;
 }

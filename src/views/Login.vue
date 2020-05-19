@@ -1,10 +1,10 @@
 <template>
   <div id="outer">
     <h1 class="title">Welkom bij FestiFind</h1>
-    <button class="btn btn-primary" @click="logInWithFacebook">Ga door met Facebook</button>
+    <button class="btn btn-primary facebookbtn" @click="logInWithFacebook">Ga door met Facebook</button>
     <br />
     <router-link :to="{name: 'Register'}">
-      <a>Geen Facebook? ga door zonder Facebook</a>
+      <a class="test">Geen Facebook? ga door zonder Facebook</a>
     </router-link>
   </div>
 </template>
@@ -51,7 +51,7 @@ export default {
     }
 };
 </script>
-<style>
+<style scoped>
 .title {
   position: absolute;
   width: 278px;
@@ -71,7 +71,7 @@ export default {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.btn {
+.facebookbtn {
   margin-top: 20%;
   background: #065bff;
   border-radius: 10px;
