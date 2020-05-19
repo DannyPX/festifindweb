@@ -1,15 +1,16 @@
 <template>
   <div id="outer">
-      <button class="btn btn-primary" @click="logInWithFacebook">Inloggen met Facebook</button><br />
-      <router-link :to="{name: 'Register'}">
-        <button class="btn btn-primary">Maak een Festifind account</button>
-      </router-link>
+    <h1 class="title">Welkom bij FestiFind</h1>
+    <button class="btn btn-primary" @click="logInWithFacebook">Ga door met Facebook</button>
+    <br />
+    <router-link :to="{name: 'Register'}">
+      <a>Geen Facebook? ga door zonder Facebook</a>
+    </router-link>
   </div>
 </template>
 <script>
-
 export default {
-  name:"facebookLogin",
+  name: "facebookLogin",
   methods: {
     async logInWithFacebook() {
       await this.loadFacebookSDK(document, "script", "facebook-jssdk");
@@ -45,33 +46,59 @@ export default {
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     },
-    async redirectToRegister() {
-      
-    }
+    async redirectToRegister() {}
   }
 };
 </script>
 <style>
-.FacebookBtn{
-  color:white;
-  width: 150px;
-  background-color: #3b5998;
-  height: 2.5rem;
-  border-radius: 6px;
-  font-weight: 400;
-  font-size: 0.8rem;
-  padding: 4px;
-  margin: 4px;
+.title {
+  position: absolute;
+  width: 278px;
+  height: 111px;
+  left: 41px;
+  top: 136px;
+
+  font-family: "Berlin Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 53px;
+  text-align: center;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.Btn{
-  color:white;
-  width: 280px;
-  background-color: #333333;
-  height: 2.5rem;
-  border-radius: 6px;
-  font-weight: 400;
-  font-size: 0.8rem;
-  margin: 4px;
+
+.btn {
+  margin-top: 20%;
+  background: #065bff;
+  border-radius: 10px;
+
+  font-family: "Nunito Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a {
+  font-family: 'Nunito Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #outer {
