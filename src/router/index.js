@@ -31,6 +31,11 @@ const routes = [
     component: () => import('../views/Messages.vue')
   },
   {
+    path: "/Friends/",
+    name: "Friends",
+    component: () => import('../views/Friends.vue')
+  },
+  {
     path: "/Tickets/",
     name: "Tickets",
     component: () => import('../views/Tickets.vue')
@@ -39,6 +44,11 @@ const routes = [
     path: "/Calender/",
     name: "Calender",
     component: () => import('../views/Calender.vue')
+  },
+  {
+    path: "/Settings/",
+    name: "Settings",
+    component: () => import('../views/Settings.vue')
   },
 ];
 

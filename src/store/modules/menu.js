@@ -2,20 +2,11 @@
 // }
 
 const state = {
-    menu: [{
-        header: true,
-        title: 'Account',
-        hiddenOnCollapse: true
-      },
+    menu: [
       {
         href: '/login',
         title: 'Login',
         icon: 'fa fa-user'
-      },
-      {
-        header: true,
-        title: 'Festival',
-        hiddenOnCollapse: true
       },
       {
         href: '/',
@@ -23,31 +14,28 @@ const state = {
         icon: 'fa fa-home'
       },
       {
-        href: '/Tickets',
-        title: 'Tickets',
-        icon: 'fa fa-barcode'
-      },
-      {
-        href: '/Calender',
-        title: 'Kalender',
-        icon: '	fa fa-calendar'
-      },
-      {
-        header: true,
-        title: 'Sociaal',
-        hiddenOnCollapse: true
+        href: '/Friends',
+        title: 'Vrienden',
+        icon: 'fa fa-user-friends'
       },
       {
         href: '/Groups',
         title: 'Groepen',
         icon: 'fa fa-users'
       },
-      
       {
-        href: '/Messages',
-        title: 'Berichten',
-        icon: 'fa fa-comment'
+        href: '/Tickets',
+        title: 'Tickets',
+        icon: 'fa fa-ticket-alt'
       },
+      {
+        href: '/Settings',
+        title: 'Instellingen',
+        icon: 'fa fa-cog'
+      },
+      
+      
+      
     ],
     collapsed: false
 }

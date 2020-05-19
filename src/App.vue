@@ -26,8 +26,10 @@ export default {
   font-family: 'Nunito Regular';
   src: url('assets/Nunito Regular.ttf');
 }
-body{
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #51D5FF !important;
+body, html{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(150.85deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 52.95%), #51D5FF !important;
 }
 #wrapper {
   transition: margin .3s;
@@ -68,5 +70,24 @@ font-weight: normal;
 font-size: 24px;
 line-height: 26px;
 text-align: center;
+}
+
+.title{
+  position: absolute;
+width: 283px;
+height: 40px;
+left: 39px;
+top: 18px;
+
+font-family: 'Berlin Sans';
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 40px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
 }
 </style>
