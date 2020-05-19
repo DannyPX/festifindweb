@@ -14,13 +14,33 @@ const state = {
       },
       {
         header: true,
-        title: 'Festival',
+        title: 'Festifind',
         hiddenOnCollapse: true
       },
       {
         href: '/',
         title: 'Home',
         icon: 'fa fa-home'
+      },
+      {
+        href: '/Tickets',
+        title: 'Tickets',
+        icon: 'fa fa-barcode'
+      },
+      {
+        href: '/Messages',
+        title: 'Berichten',
+        icon: 'fa fa-comment'
+      },
+      {
+        href: '/Groups',
+        title: 'Groepen',
+        icon: 'fa fa-users'
+      },
+      {
+        href: '/Calender',
+        title: 'Kalender',
+        icon: '	fa fa-calendar'
       }
     ],
     collapsed: false
