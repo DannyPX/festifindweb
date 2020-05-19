@@ -14,12 +14,27 @@ const state = {
       },
       {
         header: true,
-        title: 'Festival',
+        title: 'Festifind',
         hiddenOnCollapse: true
       },
       {
         href: '/',
         title: 'Home',
+        icon: 'fa fa-home'
+      },
+      {
+        href: '/Tickets',
+        title: 'Tickets',
+        icon: 'fa fa-home'
+      },
+      {
+        href: '/Messages',
+        title: 'Messages',
+        icon: 'fa fa-home'
+      },
+      {
+        href: '/Groups',
+        title: 'Groups',
         icon: 'fa fa-home'
       }
     ],

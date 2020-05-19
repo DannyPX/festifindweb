@@ -20,6 +20,21 @@ const routes = [
     name: "Register",
     component: () => import('../views/Register.vue')
   },
+  {
+    path: "/Groups/",
+    name: "Groups",
+    component: () => import('../views/Groups.vue')
+  },
+  {
+    path: "/Messages/",
+    name: "Messages",
+    component: () => import('../views/Messages.vue')
+  },
+  {
+    path: "/Tickets/",
+    name: "Tickets",
+    component: () => import('../views/Tickets.vue')
+  },
 ];
 
 const router = new VueRouter({
