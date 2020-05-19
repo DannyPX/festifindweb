@@ -35,6 +35,11 @@ const routes = [
     name: "Tickets",
     component: () => import('../views/Tickets.vue')
   },
+  {
+    path: "/Calender/",
+    name: "Calender",
+    component: () => import('../views/Calender.vue')
+  },
 ];
 
 const router = new VueRouter({

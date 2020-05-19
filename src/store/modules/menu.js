@@ -25,17 +25,22 @@ const state = {
       {
         href: '/Tickets',
         title: 'Tickets',
-        icon: 'fa fa-home'
+        icon: 'fa fa-barcode'
       },
       {
         href: '/Messages',
-        title: 'Messages',
-        icon: 'fa fa-home'
+        title: 'Berichten',
+        icon: 'fa fa-comment'
       },
       {
         href: '/Groups',
-        title: 'Groups',
-        icon: 'fa fa-home'
+        title: 'Groepen',
+        icon: 'fa fa-users'
+      },
+      {
+        href: '/Calender',
+        title: 'Kalender',
+        icon: '	fa fa-calendar'
       }
     ],
     collapsed: false
