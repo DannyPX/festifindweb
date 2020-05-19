@@ -1,7 +1,9 @@
 <template>
   <div id="outer">
       <button class="btn btn-primary" @click="logInWithFacebook">Inloggen met Facebook</button><br />
-      <button class="btn btn-primary" @click="redirectToRegister">Maak een Festifind account</button>
+      <router-link :to="{name: 'Register'}">
+        <button class="btn btn-primary">Maak een Festifind account</button>
+      </router-link>
   </div>
 </template>
 <script>
@@ -41,6 +43,9 @@ export default {
       js.id = id;
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
+    },
+    async redirectToRegister() {
+      
     }
   }
 };
@@ -75,5 +80,6 @@ export default {
   align-items: center;
   text-align: center;
   min-height: 100vh;
+  min-width: 85vw;
 }
 </style>
