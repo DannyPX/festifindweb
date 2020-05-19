@@ -37,4 +37,14 @@
 .form-check-label{
   max-width: 180px;
 }
+
+#outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  min-width: 85vw;
+}
 </style>
