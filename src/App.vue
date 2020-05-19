@@ -18,9 +18,11 @@ export default {
 </script> 
 
 <style>
+
 #wrapper {
   transition: margin .3s;
   margin-left: 350px;
+  position:fixed;
 }
 
 .slide-enter-active {
