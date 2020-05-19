@@ -1,32 +1,52 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+  <div id="wrapper">
+    <transition name="slide" mode="out-in">
+      <router-view></router-view>
+    </transition>
+    <Menu></Menu>
   </div>
 </template>
 
+<script>
+import Menu from './components/menu'
+
+export default {
+  components: {
+    Menu,
+  }
+}
+</script> 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+#wrapper {
+  transition: margin .3s;
+  margin-left: 350px;
 }
 
-#nav {
-  padding: 30px;
+.slide-enter-active {
+    animation: slide-in .3s ease-in forwards;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.slide-leave-active {
+    animation: slide-out .3s ease-in forwards;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+@keyframes slide-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 </style>
