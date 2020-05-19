@@ -14,7 +14,7 @@ const state = {
       },
       {
         header: true,
-        title: 'Festifind',
+        title: 'Festival',
         hiddenOnCollapse: true
       },
       {
@@ -28,20 +28,26 @@ const state = {
         icon: 'fa fa-barcode'
       },
       {
-        href: '/Messages',
-        title: 'Berichten',
-        icon: 'fa fa-comment'
+        href: '/Calender',
+        title: 'Kalender',
+        icon: '	fa fa-calendar'
+      },
+      {
+        header: true,
+        title: 'Sociaal',
+        hiddenOnCollapse: true
       },
       {
         href: '/Groups',
         title: 'Groepen',
         icon: 'fa fa-users'
       },
+      
       {
-        href: '/Calender',
-        title: 'Kalender',
-        icon: '	fa fa-calendar'
-      }
+        href: '/Messages',
+        title: 'Berichten',
+        icon: 'fa fa-comment'
+      },
     ],
     collapsed: false
 }
