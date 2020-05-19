@@ -61,4 +61,10 @@ export default {
 .collapsed {
   padding-left: 50px;
 }
+
+.v-sidebar-menu{
+  background: white !important;
+  background: radial-gradient(31.27% 15.52% at 3.36% 98.91%, #FDFF87 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #51D5FF 0%, rgba(135, 255, 176, 0.6875) 19.79%, rgba(255, 255, 255, 0) 38.02%), #FFFFFF !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 </style>

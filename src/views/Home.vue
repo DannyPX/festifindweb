@@ -1,6 +1,21 @@
 <template>
- <h1>Hello</h1>
+  <h2 class="subtitle">Populaire events</h2>
 </template>
 
 <script>
 </script>
+
+<style>
+.subtitle {
+  position: absolute;
+  width: 207.77px;
+  height: 55.55px;
+  left: 161px;
+  top: 85px;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+</style>

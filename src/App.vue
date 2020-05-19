@@ -18,7 +18,17 @@ export default {
 </script> 
 
 <style>
-
+@font-face {
+  font-family: 'Berlin Sans';
+  src: url('assets/Berlin Sans FB Regular.ttf');
+}
+@font-face {
+  font-family: 'Nunito Regular';
+  src: url('assets/Nunito Regular.ttf');
+}
+body{
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #51D5FF !important;
+}
 #wrapper {
   transition: margin .3s;
   margin-left: 350px;
@@ -49,5 +59,14 @@ export default {
     to {
         opacity: 0;
     }
+}
+
+.subtitle{
+  font-family: 'Berlin Sans', sans;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 26px;
+text-align: center;
 }
 </style>
