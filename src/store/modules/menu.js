@@ -28,12 +28,26 @@ const state = {
 
 
 const mutations = {
+    'SET_COLLAPSED' (state, bool) {
+        state.collapsed = bool
+    }
 }
 
 const actions = {
+    setCollapsed: ({
+        commit
+    }, bool) => {
+        commit('SET_COLLAPSED', bool)
+    }
 }
 
 const getters = {
+    menu: state => {
+        return state.menu
+    },
+    collapsed: state => {
+        return state.collapsed
+    }
 }
 
 export default {

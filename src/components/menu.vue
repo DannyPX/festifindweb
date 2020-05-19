@@ -5,7 +5,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
+  computed: {
+    ...mapGetters([
+      'menu',
+      'collapsed'
+    ])
+  },
   mounted () {
     this.onResize()
     window.addEventListener('resize', this.onResize)
@@ -20,38 +28,12 @@ export default {
     },
     onResize () {
       if (window.innerWidth <= 767) {
-        this.collapsed = true
+        this.$store.dispatch('setCollapsed', true)
         document.getElementById('wrapper').style.marginLeft = '50px'
       } else {
-        this.collapsed = false
+        this.$store.dispatch('setCollapsed', false)
         document.getElementById('wrapper').style.marginLeft = '350px'
       }
-    }
-  },
-  data() {
-    return {
-      menu: [{
-          header: true,
-          title: 'Account',
-          hiddenOnCollapse: true
-        },
-        {
-          href: '/login',
-          title: 'Login',
-          icon: 'fa fa-user'
-        },
-        {
-          header: true,
-          title: 'Festival',
-          hiddenOnCollapse: true
-        },
-        {
-          href: '/',
-          title: 'Home',
-          icon: 'fa fa-home'
-        }
-      ],
-      collapsed: false
     }
   }
 }
