@@ -8,7 +8,7 @@
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Voor-en achternaam</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <small id="emailHelp" class="form-text text-muted">Dit is hoe mensen je op Festifind zien.</small>
   </div>
   <div class="form-group">
