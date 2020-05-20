@@ -1,42 +1,41 @@
 // const apiLinks = {
 // }
 
-const state = {
-    menu: [
-      {
-        href: '/login',
-        title: 'Login',
-        icon: 'fa fa-user'
-      },
-      {
-        href: '/',
-        title: 'Home',
-        icon: 'fa fa-home'
-      },
-      {
-        href: '/Friends',
-        title: 'Vrienden',
-        icon: 'fa fa-user-friends'
-      },
-      {
-        href: '/Groups',
-        title: 'Groepen',
-        icon: 'fa fa-users'
-      },
-      {
-        href: '/Tickets',
-        title: 'Tickets',
-        icon: 'fa fa-ticket-alt'
-      },
-      {
-        href: '/Settings',
-        title: 'Instellingen',
-        icon: 'fa fa-cog'
-      },
-      
-      
-      
+const menuType = {
+    noAuth: [
+        {
+            href: '/login',
+            title: 'Login',
+            icon: 'fa fa-user'
+        }
     ],
+    withAuth: [
+        {
+            href: '/home',
+            title: 'Home',
+            icon: 'fa fa-home'
+        }, {
+            href: '/friends',
+            title: 'Vrienden',
+            icon: 'fa fa-user-friends'
+        }, {
+            href: '/groups',
+            title: 'Groepen',
+            icon: 'fa fa-users'
+        }, {
+            href: '/tickets',
+            title: 'Tickets',
+            icon: 'fa fa-ticket-alt'
+        }, {
+            href: '/settings',
+            title: 'Instellingen',
+            icon: 'fa fa-cog'
+        }
+    ]
+}
+
+const state = {
+    menu: [],
     collapsed: false
 }
 
@@ -44,6 +43,9 @@ const state = {
 const mutations = {
     'SET_COLLAPSED' (state, bool) {
         state.collapsed = bool
+    },
+    'SET_MENU'(state, menu) {
+        state.menu = menu
     }
 }
 
@@ -52,6 +54,16 @@ const actions = {
         commit
     }, bool) => {
         commit('SET_COLLAPSED', bool)
+    },
+    setWithAuth: ({
+        commit
+    }) => {
+        commit('SET_MENU', menuType.withAuth)
+    },
+    setNoAuth: ({
+        commit
+    }) => {
+        commit('SET_MENU', menuType.noAuth)
     }
 }
 

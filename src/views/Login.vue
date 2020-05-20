@@ -8,9 +8,16 @@
     </router-link>
   </div>
 </template>
+
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-    name:"facebookLogin",
+    computed: {
+        ...mapGetters([
+            'account'
+        ])
+    },
     mounted () {
         let _this = this
         this.$nextTick(() => {
@@ -20,7 +27,7 @@ export default {
                 cookie: true, // This is important, it's not enabled by default
                 autoLogAppEvents : true,
                 xfbml : true,
-                version: "v13.0"
+                version: "v7.0"
             })
             window.FB.AppEvents.logPageView()
             _this.FB = window.FB
@@ -37,20 +44,24 @@ export default {
     },
     methods: {
         logInWithFacebook () {
+            let _this = this
             window.FB.login(function(response) {
                 if (response.authResponse) {
-                alert("You are logged in &amp; cookie set!");
-                // Now you can redirect the user or do an AJAX request to
-                // a PHP script that grabs the signed request from the cookie.
+                    console.log('Welcome!  Fetching your information.... ');
+                    window.FB.api('/me?fields', {fields: 'id,name,last_name,birthday,about,location'} , function(response) {
+                        _this.$store.dispatch('setAccount', response)
+                        _this.$store.dispatch('setWithAuth')
+                        _this.$router.push('/home')
+                    });
                 } else {
-                alert("User cancelled login or did not fully authorize.");
+                    console.log("User cancelled login or did not fully authorize.");
                 }
             });
-            return false;
         }
     }
 };
 </script>
+
 <style scoped>
 .title {
   position: absolute;
