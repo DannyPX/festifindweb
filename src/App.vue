@@ -48,8 +48,6 @@ html {
 
 #content {
   width: calc(100% - 50px);
-  padding-top:18px;
-  padding-bottom: 18px;
   padding-left: 23px;
   padding-right: 23px;
   overflow: hidden;
@@ -94,6 +92,7 @@ html {
 }
 
 .title {
+  margin-top: 18px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 31px;

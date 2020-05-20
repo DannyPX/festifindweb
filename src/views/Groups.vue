@@ -73,7 +73,7 @@
 
 .groupinfo {
   margin-left: 5%;
-  width: 80%;
+  width: 70%;
 }
 
 .addIcon {

@@ -55,6 +55,11 @@ const routes = [
     name: "Settings",
     component: () => import('../views/Settings.vue')
   },
+  {
+    path: "/ProfilePage/",
+    name: "ProfilePage",
+    component: () => import('../views/ProfilePage.vue')
+  }
 ];
 
 const router = new VueRouter({
