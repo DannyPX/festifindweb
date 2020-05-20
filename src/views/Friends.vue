@@ -16,7 +16,7 @@
       </div>
 
     </div>
-    <i class="fa fa-user-plus fa-2x addIcon"></i>
+    <i class="fa fa-plus fa-2x addIcon"></i>
   </div>
 </template>
 
