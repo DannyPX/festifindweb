@@ -1,8 +1,6 @@
 <template>
 <div id="content">
   <h1 class="title">Home</h1>
-
-
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <h5 style="text-align: center;">Populaire events</h5>
   <div class="carousel-inner">
