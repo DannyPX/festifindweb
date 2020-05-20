@@ -1,8 +1,9 @@
 <template>
-  <div id="wrapper">
-    <transition name="slide" mode="out-in">
+  <div id="wrapper">  
+      
+        <transition name="slide" mode="out-in">
       <router-view></router-view>
-    </transition>
+      </transition>
     <Menu></Menu>
   </div>
 </template>
@@ -38,10 +39,17 @@ html {
     #51d5ff !important;
 }
 #wrapper {
+
+  width: 100%;
+  height: 100%;
   transition: margin 0.3s;
-  margin-left: 350px;
   position: fixed;
 }
+
+#content {
+  width: calc(100% - 50px);
+}
+
 
 .slide-enter-active {
   animation: slide-in 0.3s ease-in forwards;
@@ -79,10 +87,10 @@ html {
 }
 
 .title {
-  width: 100%;
-  position: absolute;
-  height: 40px;
-  top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 18px;
 
   font-family: "Berlin Sans";
   font-style: normal;
@@ -90,7 +98,6 @@ html {
   font-size: 36px;
   line-height: 40px;
   /* identical to box height */
-
   text-align: center;
 
   color: #000000;

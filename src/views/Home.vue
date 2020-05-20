@@ -1,5 +1,5 @@
 <template>
-<div class="mx-auto">
+<div id="content">
   <h2 class="subtitle">Populaire events</h2>
   </div>
 </template>
