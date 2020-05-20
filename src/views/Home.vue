@@ -1,5 +1,7 @@
 <template>
+<div id="content">
   <h2 class="subtitle">Populaire events</h2>
+  </div>
 </template>
 
 <script>
@@ -13,9 +15,5 @@
   left: 161px;
   top: 85px;
 }
-body,
-html {
-  height: 100%;
-  width: 100%;
-}
+
 </style>

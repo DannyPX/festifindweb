@@ -63,13 +63,11 @@ export default {
 </script>
 
 <style scoped>
-.title {
-  position: absolute;
-  width: 278px;
-  height: 111px;
-  left: 41px;
-  top: 136px;
 
+.title {
+  width: 278px;
+  top: 137px;
+  position: absolute;
   font-family: "Berlin Sans";
   font-style: normal;
   font-weight: normal;
