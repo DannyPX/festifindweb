@@ -108,7 +108,7 @@ export default {
 .festivalName {
   margin-top: 18px;
   margin-bottom: 18px;
-  font-family: Berlin Sans FB;
+  font-family: "Berlin Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -145,7 +145,7 @@ export default {
 
 h6 {
   margin-top: 18px;
-  font-family: Nunito;
+  font-family: "Nunito Regular";
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
@@ -200,7 +200,7 @@ a {
 
 p {
   margin-bottom: 0px;
-  font-family: Nunito;
+  font-family: "Nunito Regular";
   font-style: normal;
   font-weight: normal;
 }
