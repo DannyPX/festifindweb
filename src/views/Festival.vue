@@ -116,6 +116,7 @@ export default {
   line-height: 26px;
   align-items: center;
   text-align: center;
+  color: #333;
 }
 
 .btn {
@@ -192,7 +193,7 @@ i {
 }
 
 a {
-  color: black;
+  color: #333;
   text-decoration: underline;
   font-family: "Nunito Regular";
   font-style: normal;

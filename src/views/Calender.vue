@@ -1,18 +1,18 @@
 <template>
 <div id="content">
-<h1 class="title">Kalender</h1>
+<h1>Kalender</h1>
 <div class="wrapper">
     <ul>
         <li v-for="index in 20" :key="index">    
             <div class="event-container">
-                <div class="event-date">
-                <p>04-06-2021</p>
+                <div class="event-date">                   
+                <p><i class="fa fa-calendar"></i> 12 apr. 2020 - 13 apr. 2020</p>
                 </div>
                 <div class="event-img">
-                    image
+                    <img class="festivalImage" src="../assets/maxresdefault.jpg" />
                 </div>
                 <div class="event-title">
-                <p>Intents</p>
+                <p>Awakenings</p>
                 </div>
             </div>   
         </li>
@@ -26,6 +26,15 @@
 </script>
 
 <style scoped>
+.festivalImage 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
 .wrapper
 {  
     position: absolute;
@@ -53,13 +62,13 @@
   {
     width: 90%;
     margin-left: 0%;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
     margin-top: 4%;
     height: 180px;
     background-color: white;
     color: #333;
     border-radius: 8px;
-    box-shadow: 6px 6px 4px 2px rgba(0, 0, 255, .1);
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .1);
     position: relative;
   }
 

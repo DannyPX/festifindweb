@@ -1,7 +1,7 @@
 <template>
 <div>
 <div id="content">
- <h1 class="title">Tickets</h1>
+ <h1>Tickets</h1>
 </div> 
 <div class="ticket-container">
     <ul>
@@ -67,7 +67,7 @@ export default{
     width: 84%;
     margin: 8px;
     height: 100%;
-    padding-bottom: 120px;
+    padding-bottom: 64px;
     overflow: scroll;
 }
 
