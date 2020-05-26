@@ -64,9 +64,10 @@ export default{
 .ticket-container
 {  
     position: absolute;
-    width: 82%;
+    width: 84%;
     margin: 8px;
-    height: 85%;
+    height: 100%;
+    padding-bottom: 120px;
     overflow: scroll;
 }
 

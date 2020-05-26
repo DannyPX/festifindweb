@@ -82,7 +82,7 @@
     position: absolute; 
     bottom: 0; 
     width: 100%; 
-    height: 50px; 
+    height: 40px; 
     background-color: white;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
