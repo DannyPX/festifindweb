@@ -193,7 +193,7 @@ i {
 a {
   color: black;
   text-decoration: underline;
-  font-family: Nunito;
+  font-family: "Nunito Regular";
   font-style: normal;
   font-weight: normal;
 }
