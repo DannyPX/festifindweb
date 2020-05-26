@@ -55,7 +55,6 @@ html {
   position: relative;
 }
 
-
 .slide-enter-active {
   animation: slide-in 0.3s ease-in forwards;
 }

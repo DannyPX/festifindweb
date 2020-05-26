@@ -69,7 +69,7 @@
 }
 
 .username {
-  font-family: Berlin Sans;
+  font-family: "Berlin Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -79,7 +79,7 @@
 
 .bio {
     overflow-wrap: break-word;
-  font-family: Nunito;
+  font-family: "Nunito Regular";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -88,6 +88,11 @@
 
 .carouselslide{
     margin-bottom: 20px;
+}
+
+.carouselslide, .d-block{
+    object-fit: cover;
+    height: 300px;
 }
 
 .qrCode{
