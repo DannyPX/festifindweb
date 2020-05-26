@@ -51,8 +51,8 @@ export default {
   border: 5px solid #f3f3f3; /* Light grey */
   border-top: 5px solid #3498db; /* Blue */
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 40px;
+  height: 40px;
   animation: spin 2s linear infinite;
 }
 
