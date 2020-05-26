@@ -18,7 +18,7 @@
 </div>
 
 
-<h5>Profiel</h5>
+<h5>Account</h5>
 <div class="form-check">
 <p>Wijzig profiel</p>
 </div>

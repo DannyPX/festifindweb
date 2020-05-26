@@ -1,5 +1,8 @@
 <template>
 <div id="content">
+    <router-link :to="{name: 'Home'}">
+      <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
+    </router-link>
 <h1>Kalender</h1>
 <div class="wrapper">
     <ul>
@@ -26,6 +29,11 @@
 </script>
 
 <style scoped>
+.back-btn
+{
+    color: black;
+}
+
 .festivalImage 
 {
     width: 100%;

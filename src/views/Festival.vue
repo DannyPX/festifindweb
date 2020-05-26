@@ -1,9 +1,9 @@
 <template>
   <div id="content">
     <div class="innercontent">
-      <a>
-        <i class="fas fa-arrow-left fa-3x backIcon"></i>
-      </a>
+          <router-link :to="{name: 'Home'}">
+      <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
+      </router-link>
       <img class="festivalImage" src="../assets/maxresdefault.jpg" />
       <h3 class="festivalName">Awakenings Festival 2020</h3>
       <button class="btn">Tickets</button>
