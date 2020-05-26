@@ -17,9 +17,12 @@
 </label>
 </div>
 
-<h5>Profiel</h5>
-<p>Wijzig profiel</p>
 
+<h5>Profiel</h5>
+<div class="form-check">
+<p>Wijzig profiel</p>
+<p>Uitloggen</p>
+</div>
 </div>
 </template>
 
