@@ -43,13 +43,12 @@
       </div>
       <div>
         <i class="fas fa-map-marker-alt"></i>
+        <!--Location with link to google maps ^-->
         <a
           target="_blank"
           href="https://www.google.nl/maps/place/Herengracht+433,+1017+BR+Amsterdam"
           class="info"
-        >
-        <!--Location with link to google maps ^-->
-        Herengracht 433, 1017 BR Amsterdam</a>
+        >Herengracht 433, 1017 BR Amsterdam</a>
       </div>
 
       <h6 class="heading">Lineup</h6>
