@@ -1,7 +1,7 @@
 <template>
   <div id="content">
     <div class="innercontent">
-      <a>
+      <a href="javascript:history.go(-1)">
         <i class="fas fa-arrow-left fa-3x backIcon"></i>
       </a>
       <img class="festivalImage" src="../assets/maxresdefault.jpg" />
@@ -84,9 +84,11 @@ export default {
 </script>
 
 <style scoped>
-.backIcon {
-  margin-top: 18px;
+
+.backIcon{
+    margin-top: 18px;
 }
+
 .innercontent {
   height: 100%;
   overflow: auto;
