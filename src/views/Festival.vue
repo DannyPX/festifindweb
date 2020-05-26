@@ -118,8 +118,8 @@ export default {
 }
 
 .btn {
-  display: inline;
-  width: 150px;
+  display: inline-block;
+  width: 48%;
   height: 45px;
   text-align: center;
   background: #065bff;
