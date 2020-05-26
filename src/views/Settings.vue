@@ -21,6 +21,8 @@
 <h5>Profiel</h5>
 <div class="form-check">
 <p>Wijzig profiel</p>
+</div>
+<div class="form-check">
 <p>Uitloggen</p>
 </div>
 </div>
