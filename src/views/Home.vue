@@ -1,11 +1,14 @@
 <template>
 <div id="content">
-  <h1 class="title">Home</h1>
+  <h1>Home</h1>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <h5 style="text-align: center;">Populaire events</h5>
+  <h4>Populaire events</h4>
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="event-container">
+        <div class="event-img">
+         <img class="festivalImage" src="../assets/maxresdefault.jpg" />
+        </div>
         <div class="event-title">
           <p>Intents</p>
         </div>
@@ -13,14 +16,19 @@
     </div>
     <div class="carousel-item">
       <div class="event-container">
+        <div class="event-img">
+         <img class="festivalImage" src="../assets/maxresdefault.jpg" />
+        </div>
         <div class="event-title">
           <p>Supremacy</p>
-        </div>
-        
+        </div>       
       </div>
     </div>
     <div class="carousel-item">
       <div class="event-container">
+        <div class="event-img">
+         <img class="festivalImage" src="../assets/maxresdefault.jpg" />
+        </div>
         <div class="event-title">
           <p>Tomorrowland</p>
         </div>
@@ -28,6 +36,9 @@
     </div>
     <div class="carousel-item">
       <div class="event-container">
+        <div class="event-img">
+         <img class="festivalImage" src="../assets/maxresdefault.jpg" />
+        </div>
         <div class="event-title">
           <p>Lowlands</p>
         </div>
@@ -43,14 +54,16 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<hr class="devide">
 <div class="home-nav">
   <div class="home-nav-inner">
+    <h4>Ontdek</h4>
     <router-link :to="{name: 'Calender'}">
-      <button class="home-btn"><i class="fa fa-calendar"></i> kalender</button>
+      <button class="home-btn"><i class="fa fa-calendar"></i> Aankomende festivals</button>
     </router-link>
     <br />
         <router-link :to="{name: ''}">
-      <button class="home-btn"><i class="fas fa-street-view"></i> Dichtbij</button>
+      <button class="home-btn"><i class="fas fa-street-view"></i> Wat is er in de buurt?</button>
     </router-link>
     <br />
   </div>
@@ -62,18 +75,33 @@
 
 </script>
 
-<style>
+<style >
+.festivalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.devide
+{
+  height: 1px;
+  background-color: white;
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 255, .1);
+  margin-bottom: -30px;
+}
+
   .event-container 
   {
-    width: 80%;
-    margin-left: 10%;
+    width: 95%;
+    margin-left: 2%;
     margin-bottom: 10%;
     margin-top: 4%;
     height: 180px;
     background-color: white;
-    color: #333;
-    border-radius: 8px;
-    box-shadow: 6px 6px 4px 2px rgba(0, 0, 255, .1);
+    border-radius: 12px;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .1);
     position: relative;
   }
 
@@ -84,8 +112,8 @@
     width: 100%; 
     height: 40px; 
     background-color: white;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     text-align: center;
     font-family: 'Nunito Regular';
     font-style: normal;
@@ -100,18 +128,17 @@
 
   .home-nav-inner
   {
-    width: 180px;
-    margin: auto;
+    width: 230px;
   }
 
   .home-btn
   {   
-    color: white;
+    color: black;
     text-align: left;
     font-family: 'Nunito Regular';
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
+    font-size: 18px;
     width: 100%;
   }
   .home-btn a 

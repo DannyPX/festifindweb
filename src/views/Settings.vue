@@ -1,6 +1,6 @@
 <template>
 <div id="content">
-<h1 class="title">Instellingen</h1>
+<h1>Instellingen</h1>
 <h5>Algemeen</h5>
 <div class="form-check">
 <p>Grote tekst</p>
