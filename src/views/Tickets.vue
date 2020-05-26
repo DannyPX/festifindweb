@@ -8,8 +8,8 @@
   <li v-for="index in 40" :key="index">
     
         <div class="ticket">
-            <div class="ticket-img">
-                
+            <div>
+                <img class="ticket-img" src="../assets/maxresdefault.jpg" />
             </div>
             <div class="ticket-text">
                 <p>Lowlands</p>
@@ -34,6 +34,14 @@ export default{
 </script>
 
 <style>
+.ticket-img
+  {
+      background-color: rgb(194, 194, 194);
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+  }
+
 .add-btn
 {
     width: 100%;
