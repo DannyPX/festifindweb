@@ -59,6 +59,11 @@ const routes = [
     path: "/ProfilePage/",
     name: "ProfilePage",
     component: () => import('../views/ProfilePage.vue')
+  },
+  {
+    path: "/Festival/",
+    name: "Festival",
+    component: () => import('../views/Festival.vue')
   }
 ];
 
