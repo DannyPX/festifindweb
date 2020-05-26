@@ -29,7 +29,7 @@
 .wrapper
 {  
     position: absolute;
-    width: 84%;
+    width: 90%;
     margin: 8px;
     height: 100%;
     padding-bottom: 100px;
@@ -52,7 +52,7 @@
   .event-container 
   {
     width: 90%;
-    margin-left: 3%;
+    margin-left: 0%;
     margin-bottom: 10%;
     margin-top: 4%;
     height: 180px;
