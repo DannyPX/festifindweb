@@ -105,4 +105,8 @@ html {
 
   color: #000000;
 }
+
+a{
+  color: black;
+}
 </style>
