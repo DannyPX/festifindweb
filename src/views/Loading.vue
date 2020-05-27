@@ -8,6 +8,7 @@
   export default {
     mounted() {
       let _this = this
+      _this.$store.dispatch('setNoAuth')
       this.$nextTick(() => {
         window.fbAsyncInit = function () {
           window.FB.init({
@@ -37,14 +38,12 @@
                       }
                     })
                   } else {
-                    //TODO: Register Menu
                     _this.$store.dispatch('setMessage', 'Je bent ingelogd op Facebook, ' + _this.$store.getters.credentials.name + ', registreer je account')
                     _this.$router.push('/register')
                   }
                 })
               });
             } else {
-              //TODO: Login Menu
               _this.$router.push('/login')
             }
           })
