@@ -2,7 +2,6 @@
   <div id="content">
     <h1 class="title">Groepen</h1>
     <div class="grouplist">
-        
       <div class="group">
         <img
           src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
@@ -10,17 +9,17 @@
         />
         <div class="groupinfo">
           <h5 class="groupname">Groepsnaam</h5>
-          <p class="message">Gingen jullie nog naar Awakenings?ssssssssssssssss</p>
+          <p class="message">
+            Gingen jullie nog naar Awakenings?ssssssssssssssss
+          </p>
         </div>
       </div>
-
     </div>
     <i class="fa fa-plus fa-2x addIcon"></i>
   </div>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style scoped>
 .grouplist {
@@ -80,5 +79,4 @@
   bottom: 18px;
   position: absolute;
 }
-
 </style>

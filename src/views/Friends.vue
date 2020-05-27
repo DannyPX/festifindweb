@@ -2,30 +2,28 @@
   <div id="content">
     <h1 class="title">Vrienden</h1>
     <div class="friendlist">
-        <a href= '/Profile'>
-      <div class="friend">
-        <img
-          src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
-          class="profilePicture"
-        />
-        <div class="userinfo">
-          <h5 class="username">Username</h5>
-          <p class="message">Ging jij nog naar Awakenings?</p>
+      <a href="/Profile">
+        <div class="friend">
+          <img
+            src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
+            class="profilePicture"
+          />
+          <div class="userinfo">
+            <h5 class="username">Username</h5>
+            <p class="message">Ging jij nog naar Awakenings?</p>
+          </div>
+          <i class="far fa-comment-dots fa-3x chatIcon"></i>
         </div>
-        <i class="far fa-comment-dots fa-3x chatIcon"></i>
-      </div>
       </a>
-
     </div>
     <i class="fa fa-plus fa-2x addIcon"></i>
   </div>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style scoped>
-a{
+a {
   color: black;
 }
 
@@ -87,5 +85,4 @@ a{
   bottom: 18px;
   position: absolute;
 }
-
 </style>

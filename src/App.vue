@@ -1,15 +1,14 @@
 <template>
-  <div id="wrapper" v-if="onUrl()">  
-      
-        <transition name="slide" mode="out-in">
+  <div id="wrapper" v-if="onUrl()">
+    <transition name="slide" mode="out-in">
       <router-view></router-view>
-      </transition>
+    </transition>
     <Menu></Menu>
   </div>
   <div v-else>
-      <transition name="slide" mode="out-in">
+    <transition name="slide" mode="out-in">
       <router-view></router-view>
-      </transition>
+    </transition>
   </div>
 </template>
 
@@ -22,20 +21,18 @@ export default {
   },
   methods: {
     onUrl() {
-      let noAuthURL = ["/", "/register", "/login", "/loginnormal"]
-      if(noAuthURL.includes(location.pathname)) {
-        return false
+      let noAuthURL = ["/", "/register", "/login", "/loginnormal"];
+      if (noAuthURL.includes(location.pathname)) {
+        return false;
       } else {
-        return true
+        return true;
       }
     }
   }
 };
-</script> 
+</script>
 
 <style>
-
-
 html {
   overflow-y: auto !important;
 }
@@ -61,7 +58,6 @@ html {
     #51d5ff !important;
 }
 #wrapper {
-
   width: 100%;
   height: 100%;
   transition: margin 0.3s, padding 0.3s;
@@ -128,7 +124,7 @@ html {
   color: #000000;
 }
 
-a{
+a {
   color: black;
 }
 </style>
