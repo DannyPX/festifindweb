@@ -88,6 +88,7 @@ const mutations = {
     state.credentials.bio = ''
     state.credentials.gender = ''
     state.credentials.city = ''
+    state.credentials.facebookid = ''
   }
 }
 
@@ -145,9 +146,11 @@ const actions = {
     }).then((response) => {
       if(response.status == 200) {
         commit('SET_TOKEN', response.data)
+        commit('SET_STATUS', true)
       }
     }).catch((error) => {
       console.log(error.response)
+      commit('SET_STATUS', false)
     })
   },
   fbAuthenticateAccount: ({

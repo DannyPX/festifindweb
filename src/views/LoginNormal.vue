@@ -32,8 +32,10 @@ export default {
     loginAuth() {
       let _this = this
       _this.$store.dispatch("authenticateAccount").then(() => {
-        _this.$store.dispatch('setWithAuth')
-        _this.$router.push('/home')
+        if(_this.$store.getters.login) {
+          _this.$store.dispatch('setWithAuth')
+          _this.$router.push('/home')
+        }
       }).catch(() => {
         
       })
