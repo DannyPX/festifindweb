@@ -1,9 +1,9 @@
 <template>
   <div id="content">
     <div class="innercontent">
-          <a href="javascript:history.go(-1)">
-      <i class="fas fa-arrow-left fa-3x back-btn"></i>
-      </a>
+      <router-link :to="{name: 'Home'}">
+      <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
+      </router-link>
       <img class="festivalImage" src="../assets/maxresdefault.jpg" />
       <h3 class="festivalName">Awakenings Festival 2020</h3>
       <button class="btn">Tickets</button>
@@ -85,12 +85,8 @@ export default {
 
 <style scoped>
 .back-btn {
-  margin-top: 18px;
-}
-.back-btn
-{
-    font-size: 36px;
-    color: black;
+  font-size: 32px;
+  color: black;
 }
 .innercontent {
   height: 100%;
