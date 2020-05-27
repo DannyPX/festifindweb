@@ -3,7 +3,7 @@
     <div class="innercontent">
       <div class="d-flex justify-content-between top">
           <a href="javascript:history.go(-1)">
-        <i class="fas fa-arrow-left fa-3x backIcon"></i>
+        <i class="fas fa-arrow-left fa-3x back-btn"></i>
         </a>
         <img
           src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
@@ -111,6 +111,9 @@ export default {
 </script>
 
 <style scoped>
+.friendIcon{
+  font-size: 36px;
+}
 .top {
   margin-top: 18px;
 }
@@ -118,15 +121,16 @@ export default {
   font-family: "Nunito Regular";
   font-size: 18px;
 }
-
-.backIcon {
-  width: 60px;
-}
 .innercontent {
   height: 100%;
   overflow: auto;
 }
-
+.back-btn
+{
+  width: 45px;
+    font-size: 36px;
+    color: black;
+}
 .innercontent::-webkit-scrollbar {
   display: none;
 }
