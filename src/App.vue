@@ -19,6 +19,21 @@ export default {
 </script> 
 
 <style>
+#outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  min-width: 85vw;
+  padding: 1em;
+}
+
+html {
+  overflow-y: auto !important;
+}
+
 @font-face {
   font-family: "Berlin Sans";
   src: url("assets/Berlin Sans FB Regular.ttf");
@@ -42,7 +57,7 @@ html {
 
   width: 100%;
   height: 100%;
-  transition: margin 0.3s;
+  transition: margin 0.3s, padding 0.3s;
   position: fixed;
 }
 

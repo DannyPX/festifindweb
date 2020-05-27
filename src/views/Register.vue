@@ -1,50 +1,61 @@
 <template>
-<div id="outer">
- <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">E-mailaddress</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">We delen je email met niemand.</small>
+  <div id="outer">
+    <b>{{ message }}</b>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" :value="credentials.email" @input="updateEmail">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Wachtwoord</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp" :value="credentials.password" @input="updatePassword">
+        <small id="passwordHelp" class="form-text text-muted">We delen je wachtwoord met niemand.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputNaam1">Voor-en achternaam</label>
+        <input type="text" class="form-control" id="exampleInputNaam1" aria-describedby="naamHelp" :value="credentials.name" @input="updateName">
+      </div>
+      <button type="button" class="btn btn-primary" v-on:click="registerAuth">Registreer</button>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Voor-en achternaam</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">Dit is hoe mensen je op Festifind zien.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Wachtwoord</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-    <small id="emailHelp" class="form-text text-muted">Wachtwoord moet bestaan uit minimaal 8 tekens</small>
-    <small id="emailHelp" class="form-text text-muted">en een hoofdletter.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Wachtwoord bevestigen</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Ja, ik ga akkoord met de algemene voorwaarden</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Registreren</button>
-</form>
-</div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapGetters(["message", "credentials"])
+  },
+  methods: {
+    updateEmail(e) {
+      this.$store.commit("UPDATE_EMAIL", e.target.value)
+    },
+    updateName(e) {
+      this.$store.commit("UPDATE_NAME", e.target.value)
+    },
+    updatePassword(e) {
+      this.$store.commit("UPDATE_PASSWORD", e.target.value)
+    },
+    registerAuth() {
+      let _this = this
+      _this.$store.dispatch("registerAccount").then(() => {
+        if(_this.$store.getters.credentials.facebookid != '') {
+          _this.$store.dispatch('fbAuthenticateAccount').then(() => {
+            if(_this.$store.getters.login) {
+              _this.$store.dispatch('setWithAuth')
+              _this.$router.push({ name: "Home" })
+            }
+          })
+        } else {
+          _this.$store.dispatch('authenticateAccount').then(() => {
+            if(_this.$store.getters.login) {
+              _this.$store.dispatch('setWithAuth')
+              _this.$router.push({ name: "Home" })
+            }
+          })
+        }
+      })
+    }
+  }
+}
 </script>
-
-<style scoped>
-.form-check-label{
-  max-width: 180px;
-}
-
-#outer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  min-width: 85vw;
-}
-</style>

@@ -4,8 +4,8 @@
 const menuType = {
     noAuth: [
         {
-            href: '/login',
-            title: 'Login',
+            href: '/',
+            title: 'Home',
             icon: 'fa fa-user'
         }
     ],
