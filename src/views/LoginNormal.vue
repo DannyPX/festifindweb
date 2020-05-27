@@ -4,7 +4,7 @@
     <form>
       <div class="form-group">
         <label for="exampleInputEmail1">Email</label>
-        <input type="password" class="form-control" id="exampleInputEmail1" :value="credentials.email" @input="updateEmail">
+        <input type="text" class="form-control" id="exampleInputEmail1" :value="credentials.email" @input="updateEmail">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Wachtwoord</label>
