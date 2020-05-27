@@ -19,16 +19,7 @@ export default {
 </script> 
 
 <style>
-#outer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  min-width: 85vw;
-  padding: 1em;
-}
+
 
 html {
   overflow-y: auto !important;

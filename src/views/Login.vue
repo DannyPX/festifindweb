@@ -1,11 +1,8 @@
 <template>
-  <div id="outer">
+  <div id="content">
     <h1 class="title">Welkom bij FestiFind</h1>
-    <button class="btn btn-primary facebookbtn" @click="logInWithFacebook">Ga door met Facebook</button>
-    <br />
-    <button class="btn btn-light normalbtn" v-on:click="normalLogin">Login</button>
-    <br />
-    <button class="btn btn-light normalbtn" v-on:click="normalRegister">Registreer</button>
+    <button class="btn btn-light" v-on:click="normalLogin">Login</button>
+    <button class="btn btn-primary" @click="logInWithFacebook">Ga door met Facebook</button>    
   </div>
 </template>
 
@@ -96,10 +93,28 @@
 </script>
 
 <style scoped>
+.btn{
+  background: #065BFF;
+border-radius: 10px;
+height: 45px;
+width: 100%;
+font-size: 23px;
+font-family: "Nunito";
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.btn-light{
+  margin-top: 38px;
+  background: white;
+border-radius: 10px;
+height: 45px;
+width: 100%;
+font-size: 23px;
+font-family: "Nunito";
+}
+
   .title {
-    width: 278px;
-    top: 137px;
-    position: absolute;
+    margin-top: 100px;
+    margin-bottom: 30%;
     font-family: "Berlin Sans";
     font-style: normal;
     font-weight: normal;
@@ -110,36 +125,5 @@
     color: #ffffff;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  .facebookbtn {
-    margin-top: 20%;
-    background: #065bff;
-    border-radius: 10px;
-
-    font-family: "Nunito Regular";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  .normalbtn {
-    border-radius: 10px;
-    font-family: "Nunito Regular";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 29px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 </style>
