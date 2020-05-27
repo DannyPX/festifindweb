@@ -1,10 +1,12 @@
 <template>
 <div id="content">
-    <router-link :to="{name: 'Home'}">
-      <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
-    </router-link>
-<h1>Kalender</h1>
-<div class="wrapper">
+<div class="d-flex justify-content-between header">
+    <a href="javascript:history.go(-1)">
+    <i class="fas fa-arrow-left fa-3x back-btn"></i>
+    </a>
+<h1 class="title">Kalender</h1>
+<div class="fillTop"></div>
+</div>
     <ul>
         <li v-for="index in 20" :key="index">    
             <div class="event-container">
@@ -20,7 +22,6 @@
             </div>   
         </li>
     </ul>
-</div>
 
 </div>
 </template>
@@ -29,11 +30,22 @@
 </script>
 
 <style scoped>
-.back-btn
-{
-    color: black;
+.header{
+    margin-top: 18px;
+}
+.fillTop{
+    width: 42px;
+}
+.title{
+    margin-top: 0;
+    display: inline-block;
 }
 
+.back-btn
+{
+    font-size: 36px;
+    color: black;
+}
 .festivalImage 
 {
     width: 100%;
@@ -43,14 +55,13 @@
     border-top-right-radius: 0px;
 }
 
-.wrapper
+ul
 {  
-    position: absolute;
-    width: 90%;
-    margin: 8px;
-    height: 100%;
-    padding-bottom: 100px;
-    overflow: scroll;
+    height: calc(100% - 85px);
+    list-style-type: none;
+    width: 100%;
+    margin: auto;
+    overflow: auto;
 }
 
 .event-date
@@ -68,10 +79,7 @@
 
   .event-container 
   {
-    width: 90%;
-    margin-left: 0%;
-    margin-bottom: 2%;
-    margin-top: 4%;
+    width: 100%;
     height: 180px;
     background-color: white;
     color: #333;
@@ -99,6 +107,16 @@
   {
       background-color: rgb(194, 194, 194);
       height: 65%;
+      width: 100%;
+  }
+
+  p{
+      margin-bottom: 0px;
+  }
+
+  li{
+      margin: auto;
+      margin-bottom: 20px;
       width: 100%;
   }
 </style>
