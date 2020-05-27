@@ -2,8 +2,8 @@
   <div id="content">
     <div class="innercontent">
       <div class="d-flex justify-content-between top">
-          <a href="javascript:history.go(-1)">
-        <i class="fas fa-arrow-left fa-3x back-btn"></i>
+        <a href="javascript:history.go(-1)">
+          <i class="fas fa-arrow-left fa-3x back-btn"></i>
         </a>
         <img
           src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
@@ -15,12 +15,22 @@
       </div>
 
       <h5 class="username">Dirk Willems</h5>
-      <p class="bio">Gezellige Brabantse jongen, ik hou van alle soorten muziek</p>
+      <p class="bio">
+        Gezellige Brabantse jongen, ik hou van alle soorten muziek
+      </p>
 
-      <div id="carouselExampleCaptions" class="carousel slide carouselslide" data-ride="carousel">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide carouselslide"
+        data-ride="carousel"
+      >
         <ol class="carousel-indicators">
           <!-- First Image -->
-          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li
+            data-target="#carouselExampleCaptions"
+            data-slide-to="0"
+            class="active"
+          ></li>
           <!-- Other Images -->
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         </ol>
@@ -66,25 +76,41 @@
 
       <div class="festivals">
         <div class="festival card">
-          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="../assets/maxresdefault.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
           </div>
         </div>
         <div class="festival card">
-          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="../assets/maxresdefault.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
           </div>
         </div>
         <div class="festival card">
-          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="../assets/maxresdefault.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
           </div>
         </div>
         <div class="festival card">
-          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="../assets/maxresdefault.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
           </div>
@@ -111,7 +137,7 @@ export default {
 </script>
 
 <style scoped>
-.friendIcon{
+.friendIcon {
   font-size: 36px;
 }
 .top {
@@ -125,11 +151,10 @@ export default {
   height: 100%;
   overflow: auto;
 }
-.back-btn
-{
+.back-btn {
   width: 45px;
-    font-size: 36px;
-    color: black;
+  font-size: 36px;
+  color: black;
 }
 .innercontent::-webkit-scrollbar {
   display: none;
@@ -168,9 +193,10 @@ export default {
   margin-bottom: 20px;
 }
 
-.carouselslide, .d-block{
-    object-fit: cover;
-    height: 300px;
+.carouselslide,
+.d-block {
+  object-fit: cover;
+  height: 300px;
 }
 
 .card {
@@ -190,7 +216,7 @@ export default {
 .card-body {
   padding: 5px;
   height: auto;
-  white-space:normal;
+  white-space: normal;
 }
 
 .festivalTitle {
@@ -200,13 +226,13 @@ export default {
 }
 
 .festivals {
-    margin-bottom: 3px;
-    height: 130px;
-    white-space: nowrap;
+  margin-bottom: 3px;
+  height: 130px;
+  white-space: nowrap;
   overflow: auto;
 }
 
-a{
-    color: black;
+a {
+  color: black;
 }
 </style>

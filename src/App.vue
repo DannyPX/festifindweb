@@ -1,9 +1,8 @@
 <template>
-  <div id="wrapper">  
-      
-        <transition name="slide" mode="out-in">
+  <div id="wrapper">
+    <transition name="slide" mode="out-in">
       <router-view></router-view>
-      </transition>
+    </transition>
     <Menu></Menu>
   </div>
 </template>
@@ -16,7 +15,7 @@ export default {
     Menu
   }
 };
-</script> 
+</script>
 
 <style>
 #outer {
@@ -55,7 +54,6 @@ html {
     #51d5ff !important;
 }
 #wrapper {
-
   width: 100%;
   height: 100%;
   transition: margin 0.3s, padding 0.3s;
@@ -122,7 +120,7 @@ html {
   color: #000000;
 }
 
-a{
+a {
   color: black;
 }
 </style>
