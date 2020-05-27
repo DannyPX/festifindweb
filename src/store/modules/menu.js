@@ -5,8 +5,8 @@ const menuType = {
     noAuth: [
         {
             href: '/login',
-            title: 'Login',
-            icon: 'fa fa-user'
+            title: 'Home',
+            icon: 'fa fa-home'
         }
     ],
     withAuth: [
