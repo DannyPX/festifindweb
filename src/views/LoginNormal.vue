@@ -13,7 +13,7 @@
       <button type="button" class="btn btn-primary" v-on:click="loginAuth">Log in</button>
       
     </form>
-    <a class="anchor" @click="()=>$router.push('Register')"><p>Nog geen account?</p></a>
+    <a class="anchor" @click="()=>$router.push({name: 'Register'})"><p>Nog geen account?</p></a>
   </div>
 </template>
 
