@@ -123,7 +123,9 @@ const actions = {
         'Content-Type': 'multipart/form-data'
       }
     }).then((response) => {
-      commit('SET_ACCOUNTDETAILS', response.data)
+      if(response.status == 200) {
+        commit('SET_ACCOUNTDETAILS', response.data)
+      }
     }).catch((error) => {
       console.log(error.response)
     })
@@ -141,7 +143,9 @@ const actions = {
         "Content-Type": "application/json"
       }
     }).then((response) => {
-      commit('SET_ACCOUNTDETAILS', response.data)
+      if(response.status == 200) {
+        commit('SET_TOKEN', response.data)
+      }
     }).catch((error) => {
       console.log(error.response)
     })
@@ -152,8 +156,10 @@ const actions = {
   }) => {
     return axios.post(apiLinks.userAPI + '/facebook_auth?token=' + state.access_token)
       .then(response => {
-        commit('SET_TOKEN', response.data)
-        commit('SET_STATUS', true)
+        if(response.status == 200) {
+          commit('SET_TOKEN', response.data)
+          commit('SET_STATUS', true)
+        }
       }).catch((error) => {
         console.log(error.response)
         commit('SET_STATUS', false)
