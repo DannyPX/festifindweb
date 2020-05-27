@@ -69,6 +69,11 @@ const routes = [
     path: "/Festival/",
     name: "Festival",
     component: () => import('../views/Festival.vue')
+  },
+  {
+    path: "/Nearby/",
+    name: "Nearby",
+    component: () => import('../views/Nearby.vue')
   }
 ];
 

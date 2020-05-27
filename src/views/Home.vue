@@ -1,6 +1,6 @@
 <template>
 <div id="content">
-  <h1>Home</h1>
+  <h1 class="title">Home</h1>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <h4>Populaire events</h4>
   <div class="carousel-inner">
@@ -62,7 +62,7 @@
       <button class="home-btn"><i class="fa fa-calendar"></i> Aankomende festivals</button>
     </router-link>
     <br />
-        <router-link :to="{name: ''}">
+        <router-link :to="{name: 'Nearby'}">
       <button class="home-btn"><i class="fas fa-street-view"></i> Wat is er in de buurt?</button>
     </router-link>
     <br />
