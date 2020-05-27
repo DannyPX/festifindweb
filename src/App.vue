@@ -63,7 +63,6 @@ html {
 }
 
 #content {
-  width: calc(100% - 50px);
   padding-left: 23px;
   padding-right: 23px;
   overflow: hidden;
@@ -110,7 +109,7 @@ html {
   margin-top: 18px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 4px;
+  margin-bottom: 18px;
   width: 60%;
   font-family: "Berlin Sans";
   font-style: normal;

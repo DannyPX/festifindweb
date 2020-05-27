@@ -57,6 +57,21 @@ const routes = [
     component: () => import('../views/Calender.vue')
   },
   {
+    path: "/Profile",
+    name: "Profile",
+    component: () => import('../views/Profile.vue')
+  },
+  {
+    path: "/ProfilePage",
+    name: "ProfilePage",
+    component: () => import('../views/ProfilePage.vue')
+  },
+  {
+    path: "/Festival",
+    name: "Festival",
+    component: () => import('../views/Festival.vue')
+  },
+  {
     path: "/Settings",
     name: "Settings",
     component: () => import('../views/Settings.vue')
@@ -68,5 +83,6 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+
 
 export default router;
