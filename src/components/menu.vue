@@ -74,4 +74,11 @@ export default {
     #ffffff !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.v-sidebar-menu .vsm--mobile-bg {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+
 </style>

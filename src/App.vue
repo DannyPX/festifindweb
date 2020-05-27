@@ -63,8 +63,12 @@ html {
 
 #content {
   width: calc(100% - 50px);
+  padding-left: 23px;
+  padding-right: 23px;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
 }
-
 
 .slide-enter-active {
   animation: slide-in 0.3s ease-in forwards;
@@ -102,19 +106,22 @@ html {
 }
 
 .title {
+  margin-top: 18px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 31px;
   width: 50%;
-  margin-top: 18px;
-
   font-family: "Berlin Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
-  line-height: 40px;
   /* identical to box height */
   text-align: center;
 
   color: #000000;
+}
+
+a{
+  color: black;
 }
 </style>
