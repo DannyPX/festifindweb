@@ -1,10 +1,15 @@
 <template>
-  <div id="wrapper">  
+  <div id="wrapper" v-if="onUrl()">  
       
         <transition name="slide" mode="out-in">
       <router-view></router-view>
       </transition>
     <Menu></Menu>
+  </div>
+  <div v-else>
+      <transition name="slide" mode="out-in">
+      <router-view></router-view>
+      </transition>
   </div>
 </template>
 
@@ -14,6 +19,16 @@ import Menu from "./components/menu";
 export default {
   components: {
     Menu
+  },
+  methods: {
+    onUrl() {
+      let noAuthURL = ["/", "/register", "/login", "/loginnormal"]
+      if(noAuthURL.includes(location.pathname)) {
+        return false
+      } else {
+        return true
+      }
+    }
   }
 };
 </script> 

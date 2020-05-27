@@ -80,13 +80,21 @@
         });
       },
       normalRegister() {
-        window.FB.logout();
+        window.FB.getLoginStatus(function (response) {
+          if (response.status == 'connected') {
+            window.FB.logout();
+          }
+        })
         this.$store.dispatch('setMessage', 'Registreer je account')
         this.$store.commit('CLEAR_CREDENTIALS')
         this.$router.push({ name: 'Register'})
       },
       normalLogin() {
-        window.FB.logout();
+        window.FB.getLoginStatus(function (response) {
+          if (response.status == 'connected') {
+            window.FB.logout();
+          }
+        })
         this.$store.dispatch('setMessage', 'Login')
         this.$store.commit('CLEAR_CREDENTIALS')
         this.$router.push({ name: 'LoginNormal'})
