@@ -74,7 +74,7 @@
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    left: calc(50% - 90px);
+    left: calc(50% - 60px);
     top: 40%;
     animation: spin 2s linear infinite;
     
