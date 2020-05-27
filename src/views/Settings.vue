@@ -23,7 +23,7 @@
       <p>Wijzig profiel</p>
     </div>
     <div class="form-check">
-      <button type="button" class="btn btn-primary" >Uitloggen</button>
+      <button type="button" class="btn btn-primary" v-on:click="logout">Uitloggen</button>
       <!-- <p>Uitloggen</p> -->
     </div>
   </div>
@@ -32,7 +32,12 @@
 <script>
 export default {
   methods: {
-    
+    logout() {
+      window.FB.logout();
+      this.$store.dispatch('setNoAuth')
+      this.$store.commit('CLEAR_CREDENTIALS')
+      this.$router.push({ name: "Login" })
+    }
   }
 }
 </script>

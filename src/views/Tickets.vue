@@ -39,7 +39,7 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
 .wrapper-btn
 {  
     text-align: center;
