@@ -1,5 +1,5 @@
 <template>
-  <div id='outer'>
+  <div class="content">
     <div class="loader"></div>
   </div>
 </template>
@@ -65,6 +65,8 @@
 
 <style scoped>
   .loader {
+    position: absolute;
+    margin: auto;
     border: 5px solid #f3f3f3;
     /* Light grey */
     border-top: 5px solid #3498db;
@@ -72,7 +74,10 @@
     border-radius: 50%;
     width: 120px;
     height: 120px;
+    left: calc(50% - 90px);
+    top: 40%;
     animation: spin 2s linear infinite;
+    
   }
 
   @keyframes spin {
