@@ -63,7 +63,6 @@ html {
 }
 
 #content {
-  width: calc(100% - 50px);
   padding-left: 23px;
   padding-right: 23px;
   overflow: hidden;
