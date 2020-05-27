@@ -12,7 +12,7 @@ const routes = [
     component: () => import('../views/Loading.vue')
   },
   {
-    path: "/Home",
+    path: "/home",
     name: "Home",
     component: () => import('../views/Home.vue')
   },
@@ -27,52 +27,52 @@ const routes = [
     component: () => import('../views/LoginNormal.vue')
   },
   {
-    path: "/Register",
+    path: "/register",
     name: "Register",
     component: () => import('../views/Register.vue')
   },
   {
-    path: "/Groups",
+    path: "/groups",
     name: "Groups",
     component: () => import('../views/Groups.vue')
   },
   {
-    path: "/Messages",
+    path: "/messages",
     name: "Messages",
     component: () => import('../views/Messages.vue')
   },
   {
-    path: "/Friends",
+    path: "/friends",
     name: "Friends",
     component: () => import('../views/Friends.vue')
   },
   {
-    path: "/Tickets",
+    path: "/tickets",
     name: "Tickets",
     component: () => import('../views/Tickets.vue')
   },
   {
-    path: "/Calender",
+    path: "/calender",
     name: "Calender",
     component: () => import('../views/Calender.vue')
   },
   {
-    path: "/Profile",
+    path: "/profile",
     name: "Profile",
     component: () => import('../views/Profile.vue')
   },
   {
-    path: "/ProfilePage",
+    path: "/profilePage",
     name: "ProfilePage",
     component: () => import('../views/ProfilePage.vue')
   },
   {
-    path: "/Festival",
+    path: "/festival",
     name: "Festival",
     component: () => import('../views/Festival.vue')
   },
   {
-    path: "/Settings",
+    path: "/settings",
     name: "Settings",
     component: () => import('../views/Settings.vue')
   }
