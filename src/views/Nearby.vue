@@ -3,10 +3,10 @@
     <router-link :to="{name: 'Home'}">
       <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
     </router-link>
-<h1 class="title">Kalender</h1>
+<h1 class="title">In de buurt</h1>
 <div class="wrapper">
     <ul>
-        <li v-for="index in 20" :key="index">    
+        <li v-for="index in 10" :key="index">    
             <div class="event-container">
                 <div class="event-date">                   
                 <p><i class="fa fa-calendar"></i> 12 apr. 2020 - 13 apr. 2020</p>

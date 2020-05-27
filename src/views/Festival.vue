@@ -1,7 +1,7 @@
 <template>
   <div id="content">
     <div class="innercontent">
-          <router-link :to="{name: 'Home'}">
+      <router-link :to="{name: 'Home'}">
       <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
       </router-link>
       <img class="festivalImage" src="../assets/maxresdefault.jpg" />
@@ -84,8 +84,9 @@ export default {
 </script>
 
 <style scoped>
-.backIcon {
-  margin-top: 18px;
+.back-btn {
+  font-size: 32px;
+  color: black;
 }
 .innercontent {
   height: 100%;

@@ -42,6 +42,7 @@ html {
   font-family: "Nunito Regular";
   src: url("assets/Nunito Regular.ttf");
 }
+
 body,
 html {
   height: 100%;
@@ -109,12 +110,13 @@ html {
   margin-top: 18px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 31px;
-  width: 50%;
+  margin-bottom: 4px;
+  width: 60%;
   font-family: "Berlin Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
+  line-height: 36px;
   /* identical to box height */
   text-align: center;
 

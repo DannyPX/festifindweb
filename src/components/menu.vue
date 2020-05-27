@@ -77,6 +77,8 @@ export default {
 
 .v-sidebar-menu .vsm--mobile-bg {
     background-color: rgba(255, 255, 255, 0.85) !important;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.25);
 }
 
