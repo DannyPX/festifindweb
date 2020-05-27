@@ -3,12 +3,18 @@
     <div class="innercontent">
       <a href="javascript:history.go(-1)">
         <i class="fas fa-arrow-left fa-3x back-btn"></i>
-        </a>
+      </a>
       <img class="festivalImage" src="../assets/maxresdefault.jpg" />
       <h3 class="festivalName">Awakenings Festival 2020</h3>
       <button class="btn">Tickets</button>
       <!-- Check if user is going to festival And edit value accordingly -->
-      <input type="button" class="btn btn2" id="btn2" value="Ik ga" @click="change">
+      <input
+        type="button"
+        class="btn btn2"
+        id="btn2"
+        value="Ik ga"
+        @click="change"
+      />
       <h6 class="heading">12 vrienden gaan</h6>
       <!-- Per friend -->
       <img
@@ -18,7 +24,7 @@
 
       <!-- More than 10 friends: show the first 9 and the counter underneath -->
       <div class="maxFriends">
-          <!-- Amount of friends -9-->
+        <!-- Amount of friends -9-->
         <p class="maxFriendsCounter">+3</p>
       </div>
 
@@ -48,7 +54,8 @@
           target="_blank"
           href="https://www.google.nl/maps/place/Herengracht+433,+1017+BR+Amsterdam"
           class="info"
-        >Herengracht 433, 1017 BR Amsterdam</a>
+          >Herengracht 433, 1017 BR Amsterdam</a
+        >
       </div>
 
       <h6 class="heading">Lineup</h6>
@@ -66,29 +73,24 @@
 
 <script>
 export default {
-    methods: {
-        //Function to attend/unattend festival
-        change: function(){
-            var elem = document.getElementById("btn2");
-    if (elem.value=="Ik ga") elem.value = "Aanwezig!";
-    else elem.value = "Ik ga";
-        }
-    },
-    mounted () {
-        
-    },
-    created () {
-    
+  methods: {
+    //Function to attend/unattend festival
+    change: function() {
+      var elem = document.getElementById("btn2");
+      if (elem.value == "Ik ga") elem.value = "Aanwezig!";
+      else elem.value = "Ik ga";
     }
-}
+  },
+  mounted() {},
+  created() {}
+};
 </script>
 
 <style scoped>
-.back-btn
-{
-    font-size: 36px;
-    color: black;
-    margin-top: 18px;
+.back-btn {
+  font-size: 36px;
+  color: black;
+  margin-top: 18px;
 }
 .innercontent {
   height: 100%;
