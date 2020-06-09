@@ -10,19 +10,19 @@ export default {
     let _this = this;
     _this.$store.dispatch("setNoAuth");
     this.$nextTick(() => {
-      window.fbAsyncInit = function() {
+      window.fbAsyncInit = function () {
         window.FB.init({
           appId: "210799246921372", //You will need to change this
           cookie: true, // This is important, it's not enabled by default
           autoLogAppEvents: true,
           xfbml: true,
-          version: "v7.0"
+          version: "v7.0",
         });
         window.FB.AppEvents.logPageView();
         _this.FB = window.FB;
         console.log("FB SDK was initialized as mixin");
 
-        window.FB.getLoginStatus(function(response) {
+        window.FB.getLoginStatus(function (response) {
           if (response.status == "connected") {
             _this.$store.commit(
               "SET_FBTOKEN",
@@ -31,9 +31,9 @@ export default {
             window.FB.api(
               "/me?fields",
               {
-                fields: "id,name,last_name,birthday,about,location"
+                fields: "id,name,last_name,birthday,about,location",
               },
-              function(response) {
+              function (response) {
                 _this.$store.dispatch("setAccount", response);
                 _this.$store.dispatch("checkFBAccountExist").then(() => {
                   if (_this.$store.getters.hasAcc) {
@@ -60,7 +60,7 @@ export default {
           }
         });
       };
-      (function(d, s, id) {
+      (function (d, s, id) {
         let js,
           fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {
@@ -72,7 +72,7 @@ export default {
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "facebook-jssdk");
     });
-  }
+  },
 };
 </script>
 

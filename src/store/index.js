@@ -10,8 +10,8 @@ const store = new Vuex.Store({
   modules: {
     home,
     auth,
-    menu
-  }
+    menu,
+  },
 });
 
 export default store;

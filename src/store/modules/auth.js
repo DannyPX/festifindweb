@@ -1,6 +1,6 @@
 import axios from "axios";
 const apiLinks = {
-  userAPI: "https://localhost:5001/api/v1.0/users"
+  userAPI: "https://localhost:5001/api/v1.0/users",
 };
 
 const state = {
@@ -16,12 +16,12 @@ const state = {
     city: "",
     passwordConfirm: "",
     tac: false,
-    facebookid: ""
+    facebookid: "",
   },
   token: "",
   access_token: "",
   hasAcc: false,
-  loginStatus: ""
+  loginStatus: "",
 };
 
 const mutations = {
@@ -89,7 +89,7 @@ const mutations = {
     state.credentials.gender = "";
     state.credentials.city = "";
     state.credentials.facebookid = "";
-  }
+  },
 };
 
 const actions = {
@@ -115,36 +115,36 @@ const actions = {
     return axios
       .post(apiLinks.userAPI, data, {
         headers: {
-          "Content-Type": "multipart/form-data"
-        }
+          "Content-Type": "multipart/form-data",
+        },
       })
-      .then(response => {
+      .then((response) => {
         if (response.status == 200) {
           commit("SET_ACCOUNTDETAILS", response.data);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error.response);
       });
   },
   authenticateAccount: ({ commit, state }) => {
     let data = JSON.stringify({
       email: state.credentials.email,
-      password: state.credentials.password
+      password: state.credentials.password,
     });
     return axios
       .post(apiLinks.userAPI + "/authenticate", data, {
         headers: {
-          "Content-Type": "application/json"
-        }
+          "Content-Type": "application/json",
+        },
       })
-      .then(response => {
+      .then((response) => {
         if (response.status == 200) {
           commit("SET_TOKEN", response.data);
           commit("SET_STATUS", true);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error.response);
         commit("SET_STATUS", false);
       });
@@ -152,22 +152,22 @@ const actions = {
   fbAuthenticateAccount: ({ commit, state }) => {
     return axios
       .post(apiLinks.userAPI + "/facebook_auth?token=" + state.access_token)
-      .then(response => {
+      .then((response) => {
         if (response.status == 200) {
           commit("SET_TOKEN", response.data);
           commit("SET_STATUS", true);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error.response);
         commit("SET_STATUS", false);
       });
   },
   checkFBAccountExist: ({ commit, state }) => {
-    return axios.get(apiLinks.userAPI).then(response => {
+    return axios.get(apiLinks.userAPI).then((response) => {
       if (
         response.data.some(
-          user => user.facebookId === "" + state.credentials.facebookid
+          (user) => user.facebookId === "" + state.credentials.facebookid
         )
       ) {
         commit("HAS_ACC", true);
@@ -175,27 +175,27 @@ const actions = {
         commit("HAS_ACC", false);
       }
     });
-  }
+  },
 };
 
 const getters = {
-  credentials: state => {
+  credentials: (state) => {
     return state.credentials;
   },
-  hasAcc: state => {
+  hasAcc: (state) => {
     return state.hasAcc;
   },
-  message: state => {
+  message: (state) => {
     return state.loginStatus;
   },
-  login: state => {
+  login: (state) => {
     return state.login;
-  }
+  },
 };
 
 export default {
   state,
   mutations,
   actions,
-  getters
+  getters,
 };

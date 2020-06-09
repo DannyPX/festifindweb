@@ -34,7 +34,7 @@
 export default {
   methods: {
     logout() {
-      window.FB.getLoginStatus(function(response) {
+      window.FB.getLoginStatus(function (response) {
         if (response.status == "connected") {
           window.FB.logout();
         }
@@ -42,8 +42,8 @@ export default {
       this.$store.dispatch("setNoAuth");
       this.$store.commit("CLEAR_CREDENTIALS");
       this.$router.push({ name: "Login" });
-    }
-  }
+    },
+  },
 };
 </script>
 
