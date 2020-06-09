@@ -37,7 +37,7 @@ import { mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["credentials", "message"])
+    ...mapGetters(["credentials", "message"]),
   },
   methods: {
     updateEmail(e) {
@@ -57,8 +57,8 @@ export default {
           }
         })
         .catch(() => {});
-    }
-  }
+    },
+  },
 };
 </script>
 

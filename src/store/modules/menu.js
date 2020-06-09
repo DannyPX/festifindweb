@@ -6,41 +6,46 @@ const menuType = {
     {
       href: "/login",
       title: "Home",
-      icon: "fa fa-home"
-    }
+      icon: "fa fa-home",
+    },
   ],
   withAuth: [
     {
       href: "/home",
       title: "Home",
-      icon: "fa fa-home"
+      icon: "fa fa-home",
+    },
+    {
+      href: "/search",
+      title: "search",
+      icon: "fa fa-search",
     },
     {
       href: "/friends",
       title: "Vrienden",
-      icon: "fa fa-user-friends"
+      icon: "fa fa-user-friends",
     },
     {
       href: "/groups",
       title: "Groepen",
-      icon: "fa fa-users"
+      icon: "fa fa-users",
     },
     {
       href: "/tickets",
       title: "Tickets",
-      icon: "fa fa-ticket-alt"
+      icon: "fa fa-ticket-alt",
     },
     {
       href: "/settings",
       title: "Instellingen",
-      icon: "fa fa-cog"
-    }
-  ]
+      icon: "fa fa-cog",
+    },
+  ],
 };
 
 const state = {
   menu: [],
-  collapsed: false
+  collapsed: false,
 };
 
 const mutations = {
@@ -49,7 +54,7 @@ const mutations = {
   },
   SET_MENU(state, menu) {
     state.menu = menu;
-  }
+  },
 };
 
 const actions = {
@@ -61,21 +66,21 @@ const actions = {
   },
   setNoAuth: ({ commit }) => {
     commit("SET_MENU", menuType.noAuth);
-  }
+  },
 };
 
 const getters = {
-  menu: state => {
+  menu: (state) => {
     return state.menu;
   },
-  collapsed: state => {
+  collapsed: (state) => {
     return state.collapsed;
-  }
+  },
 };
 
 export default {
   state,
   mutations,
   actions,
-  getters
+  getters,
 };

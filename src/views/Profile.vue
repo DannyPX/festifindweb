@@ -124,15 +124,15 @@
 export default {
   methods: {
     //Function to attend/unattend festival
-    change: function() {
+    change: function () {
       var elem = document.getElementById("friendIcon");
       if (elem.className == "fas fa-user-plus fa-3x friendIcon")
         elem.className = "fas fa-user-check fa-3x friendIcon";
       else elem.className = "fas fa-user-plus fa-3x friendIcon";
-    }
+    },
   },
   mounted() {},
-  created() {}
+  created() {},
 };
 </script>
 
