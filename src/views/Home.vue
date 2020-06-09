@@ -8,43 +8,13 @@
     >
       <h4>Populaire events</h4>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div v-for="(festival, index) in festivals" :key="festival.id" v-bind:class="[index == 0 ? 'active' : '']" class="carousel-item">
           <div class="event-container">
             <div class="event-img">
               <img class="festivalImage" src="../assets/maxresdefault.jpg" />
             </div>
             <div class="event-title">
-              <p>Intents</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="event-container">
-            <div class="event-img">
-              <img class="festivalImage" src="../assets/maxresdefault.jpg" />
-            </div>
-            <div class="event-title">
-              <p>Supremacy</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="event-container">
-            <div class="event-img">
-              <img class="festivalImage" src="../assets/maxresdefault.jpg" />
-            </div>
-            <div class="event-title">
-              <p>Tomorrowland</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="event-container">
-            <div class="event-img">
-              <img class="festivalImage" src="../assets/maxresdefault.jpg" />
-            </div>
-            <div class="event-title">
-              <p>Lowlands</p>
+              <p>{{ festival.name }}</p>
             </div>
           </div>
         </div>
@@ -89,9 +59,20 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import { mapGetters } from "vuex";
 
-<style>
+export default {
+  computed: {
+    ...mapGetters(["festivals"])
+  },
+  mounted () {
+    this.$store.dispatch('getFestivals')
+  }
+}
+</script>
+
+<style scoped>
 .festivalImage {
   width: 100%;
   height: 100%;

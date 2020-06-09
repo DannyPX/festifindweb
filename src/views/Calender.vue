@@ -8,7 +8,20 @@
       <div class="fillTop"></div>
     </div>
     <ul>
-      <li v-for="index in 20" :key="index">
+      <li v-for="festival in festivals" :key="festival.id">
+        <div class="event-container">
+          <div class="event-date">
+            <p><i class="fa fa-calendar">{{ festival.startDate }}</i></p>
+          </div>
+          <div class="event-img">
+            <img class="festivalImage" src="../assets/maxresdefault.jpg" />
+          </div>
+          <div class="event-title">
+            <p>{{ festival.name }}</p>
+          </div>
+        </div>
+      </li>
+      <!-- <li v-for="index in 20" :key="index">
         <div class="event-container">
           <div class="event-date">
             <p><i class="fa fa-calendar"></i> 12 apr. 2020 - 13 apr. 2020</p>
@@ -20,12 +33,27 @@
             <p>Awakenings</p>
           </div>
         </div>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>
 
-<script></script>
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  computed: {
+    ...mapGetters(['festivals'])
+  },
+  mounted() {
+    this.$store.dispatch('getFestivals').then(() => {
+      this.$store.getters.festivals.sort(function(a, b) {
+        return new Date(a.startDate) - new Date(b.startDate)
+      })
+    })
+  }
+}
+</script>
 
 <style scoped>
 .header {
