@@ -1,7 +1,91 @@
 <template>
   <div id="content">
-    <h1>Messages</h1>
+    <h1 class="title">Berichten</h1>
+    <div class="chatlist">
+      <a href="/Profile">
+
+        <div class="chat">
+          <img
+            src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
+            class="profilePicture"
+          />
+          <div class="chatinfo">
+            <h5 class="chatname">Dirk Willems</h5>
+            <p class="message">Ging jij nog naar Awakenings?</p>
+          </div>
+          <i class="far fa-comment-dots fa-3x chatIcon"></i>
+        </div>
+
+      </a>
+    </div>
+    <i class="fa fa-plus fa-2x addIcon"></i>
   </div>
 </template>
 
 <script></script>
+
+<style scoped>
+a {
+  color: black;
+}
+
+.chatlist {
+  overflow: auto;
+  max-height: calc(100% - 124px);
+}
+.chat {
+  margin-bottom: 29px;
+  height: 45px;
+  width: auto;
+}
+.profilePicture,
+.chatinfo,
+.chatIcon {
+  display: inline;
+  float: left;
+}
+
+.chatIcon {
+  float: right;
+}
+.profilePicture {
+  width: 45px;
+  height: 45px;
+  border: 2px solid black;
+  border-radius: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+}
+
+.chatname {
+  font-family: "Nunito Regular";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.message {
+  margin-top: -5px;
+  font-family: "Nunito Regular";
+  font-style: normal;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+  max-height: 25px;
+}
+
+.chatinfo {
+  margin-left: 5%;
+  width: 60%;
+}
+
+.addIcon {
+  bottom: 18px;
+  position: absolute;
+}
+</style>
+

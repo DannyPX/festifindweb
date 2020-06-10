@@ -16,14 +16,9 @@ const menuType = {
       icon: "fa fa-home"
     },
     {
-      href: "/friends",
-      title: "Vrienden",
-      icon: "fa fa-user-friends"
-    },
-    {
-      href: "/groups",
-      title: "Groepen",
-      icon: "fa fa-users"
+      href: "/messages",
+      title: "Berichten",
+      icon: "fa fa-envelope"
     },
     {
       href: "/tickets",
