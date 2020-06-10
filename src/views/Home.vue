@@ -10,12 +10,14 @@
       <div class="carousel-inner">
         <div v-for="(festival, index) in festivals" :key="festival.id" v-bind:class="[index == 0 ? 'active' : '']" class="carousel-item">
           <div class="event-container">
-            <div class="event-img">
-              <img class="festivalImage" src="../assets/maxresdefault.jpg" />
-            </div>
-            <div class="event-title">
-              <p>{{ festival.name }}</p>
-            </div>
+            <router-link :to="`/festival/${festival.id}`">
+              <div class="event-img">
+                <img class="festivalImage" src="../assets/maxresdefault.jpg" />
+              </div>
+              <div class="event-title">
+                <p>{{ festival.name }}</p>
+              </div>
+            </router-link>
           </div>
         </div>
       </div>
