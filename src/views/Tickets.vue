@@ -1,30 +1,20 @@
 <template>
-  <div>
     <div id="content">
       <h1 class="title">Tickets</h1>
-    </div>
-    <div class="wrapper-btn">
-      <input type="button" class="btn btn2" id="btn2" value="+" />
-    </div>
+    
     <div class="ticket-container">
-      <ul>
-        <li v-for="index in 28" :key="index">
-          <router-link :to="{ name: 'Home' }">
-          <div class="ticket">
-           
-            <div>
+
+          <div v-for="i in 20" :key="i" class="ticket">
               <img class="ticket-img" src="../assets/maxresdefault.jpg" />
-            </div>
-            <div class="ticket-text">
-              <p>Lowlands</p>
-            </div>
-             
+              <p class="ticket-text">Lowlands</p>
+
           </div>
-          </router-link>
-        </li>
-      </ul>
+
     </div>
-  </div>
+    <router-link to="/createchat">
+    <i class="fa fa-plus fa-2x addIcon"></i>
+    </router-link>
+    </div>
 </template>
 
 <script>
@@ -32,35 +22,19 @@ export default {};
 </script>
 
 <style scoped>
-.wrapper-btn {
-  text-align: center;
-  margin-left: -50px;
-}
 
-.btn {
-  width: 45px;
-  height: 45px;
-  background: #065bff;
-  border-radius: 10px;
-  font-family: "Nunito Regular";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 21px;
-  text-align: center;
-  color: #ffffff;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.ticket-btn {
+.addIcon {
   position: absolute;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  margin-left: 62%;
-  font-size: 20px;
-  width: 44px;
-  height: 44px;
-  background-color: #0275d8;
-  color: white;
+    bottom: 18px;
+    right: 18px;
+    background-color: white;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: black;
 }
 
 .ticket-img {
@@ -70,47 +44,37 @@ export default {};
   border-radius: 50%;
 }
 
-.btn-primary {
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 24px;
-}
-
 .ticket {
-  width: 80%;
   padding: 4px;
-  border-radius: 14px;
+  border-radius: 10px;
   height: 52px;
   background-color: white;
-  margin: 8px auto auto auto;
   box-shadow: 6px 6px 4px 2px rgba(0, 0, 255, 0.1);
+  margin-bottom: 15px;
 }
 
 .ticket-container {
-  position: fixed;
-  width: 82%;
-  margin: 8px;
+  width: 100%;
   height: 100%;
-  padding-bottom: 124px;
   overflow: scroll;
+  margin: 0px;
 }
 
 .ticket-img {
   background-color: #dbdbdb;
-  position: absolute;
   width: 44px;
   height: 44px;
-  border-radius: 24px;
+  border-radius: 100%;
 }
 
 .ticket-text {
-  margin-left: 60px;
-  margin-top: 8px;
+  vertical-align: middle;
+  margin: 0px;
+  margin-left: 10px;
+  display: inline-block;
   font-family: "Nunito Regular";
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  color: black;
-  text-decoration: none;
-  margin-left: 60px;
 }
 </style>

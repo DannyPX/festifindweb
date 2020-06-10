@@ -27,6 +27,9 @@
 <script></script>
 
 <style scoped>
+#content{
+  position: initial;
+}
 p{
     margin: 0px;
 }

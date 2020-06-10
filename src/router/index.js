@@ -92,10 +92,20 @@ const routes = [
     component: () => import("../views/Search.vue"),
   },
   {
+    path: "/createChat",
+    name: "createChat",
+    component: () => import("../views/CreateChat.vue"),
+  },
+  {
+    path: "/createGroup",
+    name: "createGroup",
+    component: () => import("../views/CreateGroup.vue"),
+  },
+  {
     path: "/nearby",
     name: "Nearby",
-    component: () => import("../views/Nearby.vue")
-  }
+    component: () => import("../views/Nearby.vue"),
+  },
 ];
 
 const router = new VueRouter({
