@@ -27,6 +27,9 @@
 <script></script>
 
 <style scoped>
+#content{
+    position: initial;
+}
 .messagetime{
     margin: 0px;
     margin-left: 10px;

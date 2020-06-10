@@ -18,7 +18,9 @@
 
       </a>
     </div>
+    <router-link to="/createchat">
     <i class="fa fa-plus fa-2x addIcon"></i>
+    </router-link>
   </div>
 </template>
 
@@ -43,6 +45,7 @@ a {
 .chatIcon {
   display: inline;
   float: left;
+  
 }
 
 .chatIcon {
@@ -84,8 +87,16 @@ a {
 }
 
 .addIcon {
-  bottom: 18px;
   position: absolute;
+    bottom: 18px;
+    right: 18px;
+    background-color: white;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 </style>
 

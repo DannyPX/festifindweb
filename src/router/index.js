@@ -91,6 +91,16 @@ const routes = [
     name: "search",
     component: () => import("../views/Search.vue"),
   },
+  {
+    path: "/createChat",
+    name: "createChat",
+    component: () => import("../views/CreateChat.vue"),
+  },
+  {
+    path: "/createGroup",
+    name: "createGroup",
+    component: () => import("../views/CreateGroup.vue"),
+  },
 ];
 
 const router = new VueRouter({
