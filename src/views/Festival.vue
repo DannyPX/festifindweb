@@ -75,14 +75,14 @@
 export default {
   methods: {
     //Function to attend/unattend festival
-    change: function() {
+    change: function () {
       var elem = document.getElementById("btn2");
       if (elem.value == "Ik ga") elem.value = "Aanwezig!";
       else elem.value = "Ik ga";
-    }
+    },
   },
   mounted() {},
-  created() {}
+  created() {},
 };
 </script>
 

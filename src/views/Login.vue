@@ -13,24 +13,24 @@ import { mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["credentials"])
+    ...mapGetters(["credentials"]),
   },
   mounted() {
     let _this = this;
     this.$nextTick(() => {
-      window.fbAsyncInit = function() {
+      window.fbAsyncInit = function () {
         window.FB.init({
           appId: "210799246921372", //You will need to change this
           cookie: true, // This is important, it's not enabled by default
           autoLogAppEvents: true,
           xfbml: true,
-          version: "v7.0"
+          version: "v7.0",
         });
         window.FB.AppEvents.logPageView();
         _this.FB = window.FB;
         console.log("FB SDK was initialized as mixin");
       };
-      (function(d, s, id) {
+      (function (d, s, id) {
         let js,
           fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {
@@ -46,16 +46,16 @@ export default {
   methods: {
     logInWithFacebook() {
       let _this = this;
-      window.FB.login(function(response) {
+      window.FB.login(function (response) {
         _this.$store.commit("SET_FBTOKEN", response.authResponse.accessToken);
         if (response.status == "connected") {
           //console.log('Welcome!  Fetching your information.... ');
           window.FB.api(
             "/me?fields",
             {
-              fields: "id,name,last_name,birthday,about,location"
+              fields: "id,name,last_name,birthday,about,location",
             },
-            function(response) {
+            function (response) {
               _this.$store.dispatch("setAccount", response);
               _this.$store.dispatch("checkFBAccountExist").then(() => {
                 if (_this.$store.getters.hasAcc) {
@@ -63,7 +63,7 @@ export default {
                     if (_this.$store.getters.login) {
                       _this.$store.dispatch("setWithAuth");
                       _this.$router.push({
-                        name: "Home"
+                        name: "Home",
                       });
                     }
                   });
@@ -85,7 +85,7 @@ export default {
       });
     },
     normalRegister() {
-      window.FB.getLoginStatus(function(response) {
+      window.FB.getLoginStatus(function (response) {
         if (response.status == "connected") {
           window.FB.logout();
         }
@@ -95,7 +95,7 @@ export default {
       this.$router.push({ name: "Register" });
     },
     normalLogin() {
-      window.FB.getLoginStatus(function(response) {
+      window.FB.getLoginStatus(function (response) {
         if (response.status == "connected") {
           window.FB.logout();
         }
@@ -103,8 +103,8 @@ export default {
       this.$store.dispatch("setMessage", "Login");
       this.$store.commit("CLEAR_CREDENTIALS");
       this.$router.push({ name: "LoginNormal" });
-    }
-  }
+    },
+  },
 };
 </script>
 

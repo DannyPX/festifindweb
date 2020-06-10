@@ -17,7 +17,7 @@ import Menu from "./components/menu";
 
 export default {
   components: {
-    Menu
+    Menu,
   },
   methods: {
     onUrl() {
@@ -27,8 +27,8 @@ export default {
       } else {
         return true;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

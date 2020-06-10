@@ -13,7 +13,7 @@ import { mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["menu", "collapsed"])
+    ...mapGetters(["menu", "collapsed"]),
   },
   mounted() {
     this.onResize();
@@ -43,8 +43,8 @@ export default {
         document.getElementById("wrapper").style.marginLeft = "350px";
         document.getElementById("wrapper").style.paddingRight = "350px";
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
