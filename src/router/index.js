@@ -67,7 +67,7 @@ const routes = [
     component: () => import("../views/ProfilePage.vue"),
   },
   {
-    path: "/festival",
+    path: "/festival/:id",
     name: "Festival",
     component: () => import("../views/Festival.vue"),
   },
@@ -78,9 +78,14 @@ const routes = [
   },
   {
     path: "/search",
-    name: "search",
+    name: "Search",
     component: () => import("../views/Search.vue"),
   },
+  {
+    path: "/nearby",
+    name: "Nearby",
+    component: () => import("../views/Nearby.vue")
+  }
 ];
 
 const router = new VueRouter({

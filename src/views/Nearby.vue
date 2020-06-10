@@ -6,16 +6,16 @@
     <h1 class="title">In de buurt</h1>
     <div class="wrapper">
       <ul>
-        <li v-for="index in 10" :key="index">
+        <li v-for="festival in festivals" :key="festival.id">
           <div class="event-container">
             <div class="event-date">
-              <p><i class="fa fa-calendar"></i> 12 apr. 2020 - 13 apr. 2020</p>
+              <p><i class="fa fa-calendar">{{ festival.startDate }}</i></p>
             </div>
             <div class="event-img">
               <img class="festivalImage" src="../assets/maxresdefault.jpg" />
             </div>
             <div class="event-title">
-              <p>Awakenings</p>
+              <p>{{ festival.name }}</p>
             </div>
           </div>
         </li>
@@ -24,7 +24,20 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  computed: {
+    ...mapGetters(['festivals'])
+  },
+  mounted() {
+    this.$store.dispatch('getFestivals').then(() => {
+      this.$store.dispatch('sortByDistance')
+    })
+  }
+}
+</script>
 
 <style scoped>
 .back-btn {

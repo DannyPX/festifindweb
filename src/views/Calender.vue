@@ -47,9 +47,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch('getFestivals').then(() => {
-      this.$store.getters.festivals.sort(function(a, b) {
-        return new Date(a.startDate) - new Date(b.startDate)
-      })
+      this.$store.dispatch('sortByDate')
     })
   }
 }
