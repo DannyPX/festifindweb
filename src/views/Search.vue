@@ -19,9 +19,23 @@
           </div>
         </div>
       </form>
+         <div class="search-container">
+      <ul>
+        <li v-for="index in 22" :key="index">
+          <router-link :to="{ name: 'Home' }">
+          <div class="result">
+                  
+            <div class="result-text">
+              <p>Peter Jansen</p>
+            </div>
+          </div>
+          </router-link>     
+        </li>
+      </ul>
+    </div>
     </div>
 
-    <div></div>
+    
   </div>
 </template>
 
@@ -42,4 +56,28 @@ export default {
 
 <style>
 
+
+.search-container {
+  position: fixed;
+  width: 82%;
+  margin: 8px;
+  height: 100%;
+  padding-bottom: 124px;
+  overflow: scroll;
+}
+
+.result{
+  width: 85%;
+  padding: 4px;
+  border-radius: 14px;
+  height: 52px;
+  background-color: white;
+  margin: 0 0 8px 0;
+  box-shadow: 6px 6px 4px 2px rgba(0, 0, 255, 0.1);
+}
+
+.result-text{
+  color: black;
+  text-decoration: none;
+}
 </style>

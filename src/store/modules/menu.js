@@ -17,7 +17,7 @@ const menuType = {
     },
     {
       href: "/search",
-      title: "search",
+      title: "Search",
       icon: "fa fa-search",
     },
     {

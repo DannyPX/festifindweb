@@ -5,7 +5,7 @@
         <i class="fas fa-arrow-left fa-3x back-btn"></i>
       </a>
       <img class="festivalImage" src="../assets/maxresdefault.jpg" />
-      <h3 class="festivalName">Awakenings Festival 2020</h3>
+      <h3 class="festivalName">{{ festivals.name}}</h3>
       <button class="btn">Tickets</button>
       <!-- Check if user is going to festival And edit value accordingly -->
       <input
@@ -32,29 +32,27 @@
 
       <div>
         <i class="fas fa-music"></i>
-        <p class="info">Techno</p>
-        <p class="info">/ Tech-House</p>
-        <p class="info">/ Industrial</p>
+        <p class="info">{{ festivals.genre }}</p>
       </div>
 
       <div>
         <i class="fas fa-calendar"></i>
         <!--Start date - End date-->
-        <p class="info">12 apr. 2020 - 13 apr. 2020</p>
+        <p class="info">{{ new Date(festivals.startDate).toDateString() }} - {{ new Date(festivals.endDate).toDateString() }}</p>
       </div>
       <div>
         <i class="fas fa-clock"></i>
         <!--Start time - End time-->
-        <p class="info">12.00 - 02.00</p>
+        <p class="info">{{ new Date(festivals.startDate).toLocaleTimeString('en-US') }} - {{ new Date(festivals.endDate).toLocaleTimeString('en-US') }}</p>
       </div>
       <div>
         <i class="fas fa-map-marker-alt"></i>
         <!--Location with link to google maps ^-->
         <a
           target="_blank"
-          href="https://www.google.nl/maps/place/Herengracht+433,+1017+BR+Amsterdam"
+          :href="'https://www.google.com/maps/search/' + location"
           class="info"
-          >Herengracht 433, 1017 BR Amsterdam</a
+          >{{ location }}</a
         >
       </div>
 
@@ -72,7 +70,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
+  computed: {
+    ...mapGetters(['festivals', 'location'])
+  },
   methods: {
     //Function to attend/unattend festival
     change: function () {
@@ -81,8 +84,11 @@ export default {
       else elem.value = "Ik ga";
     },
   },
-  mounted() {},
-  created() {},
+  beforeCreate () {
+    this.$store.dispatch('getFestival', this.$route.params.id).then(() => {
+      this.$store.dispatch('getLocationAddress')
+    })
+  }
 };
 </script>
 

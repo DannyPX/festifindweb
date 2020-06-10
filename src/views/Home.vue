@@ -75,7 +75,7 @@ export default {
 <style scoped>
 .festivalImage {
   width: 100%;
-  height: 100%;
+  height: 170px;
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -115,9 +115,9 @@ export default {
   font-size: 24px;
 }
 
-.home-nav {
+/* .home-nav {
   margin-top: 25%;
-}
+} */
 
 .home-nav-inner {
   width: 230px;
