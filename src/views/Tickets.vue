@@ -9,19 +9,18 @@
     <div class="ticket-container">
       <ul>
         <li v-for="index in 28" :key="index">
+          <router-link :to="{ name: 'Home' }">
           <div class="ticket">
-            <router-link :to="{ name: 'Home' }">
-              <button class="ticket-btn">
-                <i class="fas fa-arrow-right"></i>
-              </button>
-            </router-link>
+           
             <div>
               <img class="ticket-img" src="../assets/maxresdefault.jpg" />
             </div>
             <div class="ticket-text">
               <p>Lowlands</p>
             </div>
+             
           </div>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -110,5 +109,8 @@ export default {};
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
+  color: black;
+  text-decoration: none;
+  margin-left: 60px;
 }
 </style>
