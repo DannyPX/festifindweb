@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     onUrl() {
-      let noAuthURL = ["/", "/register", "/login", "/loginnormal"];
+      let noAuthURL = ["/", "/register", "/login", "/loginnormal", "/createchat", "/creategroup", "/profile", "/chat", "/groupchat", "/calender", "/festival", "/loading", "/nearby", "/profilepage", "" ];
       if (noAuthURL.includes(location.pathname)) {
         return false;
       } else {
@@ -65,11 +65,11 @@ html {
 }
 
 #content {
+  position: relative;
   padding-left: 23px;
   padding-right: 23px;
   overflow: hidden;
   height: 100%;
-  position: relative;
 }
 
 .slide-enter-active {
