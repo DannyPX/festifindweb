@@ -72,6 +72,16 @@ const routes = [
     component: () => import("../views/Festival.vue"),
   },
   {
+    path: "/chat",
+    name: "Chat",
+    component: () => import("../views/Chat.vue")
+  },
+  {
+    path: "/groupchat",
+    name: "GroupChat",
+    component: () => import("../views/GroupChat.vue")
+  },
+  {
     path: "/settings",
     name: "Settings",
     component: () => import("../views/Settings.vue"),
