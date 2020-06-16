@@ -2,7 +2,7 @@
   <div id="content">
     <h1 class="title">Vrienden</h1>
     <div class="friendlist">
-      <a href="/Profile">
+      <!-- <a href="/Profile">
         <div class="friend">
           <img
             src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
@@ -14,13 +14,16 @@
           </div>
           <i class="far fa-comment-dots fa-3x chatIcon"></i>
         </div>
-      </a>
+      </a> -->
     </div>
     <i class="fa fa-plus fa-2x addIcon"></i>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+}
+</script>
 
 <style scoped>
 a {

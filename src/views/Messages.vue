@@ -2,8 +2,7 @@
   <div id="content">
     <h1 class="title">Berichten</h1>
     <div class="chatlist">
-      <a href="/Profile">
-
+      <!-- <a href="/Profile">
         <div class="chat">
           <img
             src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
@@ -15,8 +14,7 @@
           </div>
           <i class="far fa-comment-dots fa-3x chatIcon"></i>
         </div>
-
-      </a>
+      </a> -->
     </div>
     <router-link to="/createchat">
     <i class="fa fa-plus fa-2x addIcon"></i>
