@@ -140,7 +140,7 @@ const actions = {
       })
       .then((response) => {
         if (response.status == 200) {
-          commit("SET_TOKEN", response.data);
+          commit("SET_TOKEN", response.data.token);
           commit("SET_STATUS", true);
         }
       })
@@ -154,7 +154,7 @@ const actions = {
       .post(apiLinks.userAPI + "/facebook_auth?token=" + state.access_token)
       .then((response) => {
         if (response.status == 200) {
-          commit("SET_TOKEN", response.data);
+          commit("SET_TOKEN", response.data.token);
           commit("SET_STATUS", true);
         }
       })
@@ -175,6 +175,22 @@ const actions = {
         commit("HAS_ACC", false);
       }
     });
+  },
+  refreshAccountDetails: ({ commit, state }) => {
+    return axios
+      .get(apiLinks.userAPI + "/" + "me", {
+        headers: {
+          Authorization: `Bearer ${state.token}`,
+        },
+      })
+      .then((response) => {
+        if (response.status == 200) {
+          commit("SET_ACCOUNTDETAILS", response.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
   },
 };
 
