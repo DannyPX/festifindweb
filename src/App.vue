@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     onUrl() {
-      let noAuthURL = ["/", "/register", "/login", "/loginnormal", "/createchat", "/creategroup", "/profile", "/chat", "/groupchat", "/calender", "/festival", "/loading", "/nearby", "/profilepage", "" ];
+      let noAuthURL = ["/", "/register", "/login", "/loginnormal", "/createchat", "/creategroup", "/profile", "/chat", "/groupchat", "/calender", "/festival", "/loading", "/nearby", "/profilepage", "/friendRequests" ];
       if (noAuthURL.includes(location.pathname)) {
         return false;
       } else {
@@ -119,7 +119,7 @@ html {
   font-size: 36px;
   line-height: 36px;
   /* identical to box height */
-  text-align: center;
+  text-align: center !important;
 
   color: #000000;
 }
