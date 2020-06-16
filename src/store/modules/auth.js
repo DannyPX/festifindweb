@@ -176,6 +176,22 @@ const actions = {
       }
     });
   },
+  refreshAccountDetails: ({ commit, state }) => {
+    return axios
+      .get(apiLinks.userAPI + "/" + "me", {
+        headers: {
+          Authorization: `Bearer ${state.token}`,
+        },
+      })
+      .then((response) => {
+        if (response.status == 200) {
+          commit("SET_ACCOUNTDETAILS", response.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
+  },
 };
 
 const getters = {
