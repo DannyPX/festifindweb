@@ -65,30 +65,12 @@
       <h6 class="heading">Aanwezig bij:</h6>
 
       <div class="festivals" >
-        <div class="festival card" v-for="festival in festivalAttendance" :key="festival.id">
+        <div class="festival card" v-for="festival in 5" :key="festival.id">
           <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title festivalTitle">{{festival.name}}</h5>
           </div>
-        </div>
-        <div class="festival card">
-          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
-          </div>
-        </div>
-        <div class="festival card">
-          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
-          </div>
-        </div>
-        <div class="festival card">
-          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
-          </div>
-        </div>
+        </div>        
       </div>
     </div>
   </div>
