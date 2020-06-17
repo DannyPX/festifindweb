@@ -1,6 +1,6 @@
 import axios from "axios";
 const apiLinks = {
-  userAPI: "https://localhost:5001/api/v1.0/users",
+  userAPI: "https://i409979core.venus.fhict.nl/api/v1.0/users",
 };
 
 const state = {

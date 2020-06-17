@@ -1,15 +1,17 @@
 import axios from "axios";
 
 const apiLinks = {
-  friendAPI: "https://localhost:5001/api/v1.0/friendships",
-  userAPI: "https://localhost:5001/api/v1.0/users",
+  friendAPI: "https://i409979core.venus.fhict.nl/api/v1.0/friendships",
+  userAPI: "https://i409979core.venus.fhict.nl/api/v1.0/users",
 }
 
 const state = {
   friendsID: [],
   friends: [],
   incomingRequests: [],
-  outgoingRequests: []
+  incomingDetails: [],
+  outgoingRequests: [],
+  outgoingDetails: []
 };
 
 const mutations = {
@@ -24,6 +26,8 @@ const mutations = {
   },
   CLEAN_LIST(state) {
     state.friends = []
+    state.incomingDetails = []
+    state.outgoingDetails = []
   }
 };
 
@@ -41,11 +45,28 @@ const actions = {
   },
   getFriendDetails: ({ state }) => { 
     (state.friendsID).forEach(friend => {
-      console.log("Hello 3")
       axios
       .get(apiLinks.userAPI + "/" + friend.friendId)
       .then((response) => {
         state.friends.push({...response.data})
+      })
+    });
+  },
+  getIncomingDetails: ({ state }) => { 
+    (state.incomingRequests).forEach(friend => {
+      axios
+      .get(apiLinks.userAPI + "/" + friend.friendId)
+      .then((response) => {
+        state.incomingDetails.push({...response.data})
+      })
+    });
+  },
+  getOutgoingDetails: ({ state }) => { 
+    (state.outgoingRequests).forEach(friend => {
+      axios
+      .get(apiLinks.userAPI + "/" + friend.friendId)
+      .then((response) => {
+        state.outgoingDetails.push({...response.data})
       })
     });
   },
@@ -129,10 +150,10 @@ const getters = {
     return state.friends
   },
   incoming: (state) => {
-    return state.incomingRequests
+    return state.incomingDetails
   },
   outgoing: (state) => {
-    return state.outgoingRequests
+    return state.outgoingDetails
   }
 };
 

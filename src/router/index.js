@@ -72,7 +72,7 @@ const routes = [
     component: () => import("../views/Festival.vue"),
   },
   {
-    path: "/chat",
+    path: "/chat/:id",
     name: "Chat",
     component: () => import("../views/Chat.vue")
   },

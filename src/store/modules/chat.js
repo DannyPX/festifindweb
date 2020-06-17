@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiLinks = {
-  chatAPI: "https://localhost:5001/api/v1.0/chat"
+  chatAPI: "https://i409979core.venus.fhict.nl/api/v1.0/chat"
 }
 
 const state = {

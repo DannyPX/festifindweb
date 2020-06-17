@@ -11,9 +11,24 @@ const menuType = {
   ],
   withAuth: [
     {
+      header: true,
+      title: 'Account',
+      hiddenOnCollapse: true
+    },
+    {
       href: "/profile",
       title: "Profile",
       icon: "fa fa-user"
+    },
+        {
+      href: "/friends",
+      title: "Friends",
+      icon: "fa fa-users"
+    },
+    {
+      header: true,
+      title: 'Navigation',
+      hiddenOnCollapse: true
     },
     {
       href: "/home",

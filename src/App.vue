@@ -24,8 +24,10 @@ export default {
       let noAuthURL = ["/", "/register", "/login", "/loginnormal", "/createchat", "/creategroup", "/profile", "/chat", "/groupchat", "/calender", "/festival", "/loading", "/nearby", "/profilepage", "/friendRequests" ];
       if (noAuthURL.includes(location.pathname)) {
         return false;
+      } else if ((location.pathname).includes("/chat")) {
+        return false;
       } else {
-        return true;
+        return true
       }
     },
   },

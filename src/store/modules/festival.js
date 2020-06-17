@@ -1,6 +1,6 @@
 import axios from "axios"
 const apiLinks = {
-  festivalAPI: "https://localhost:5001/api/v1.0/festivals"
+  festivalAPI: "https://i409979core.venus.fhict.nl/api/v1.0/festivals"
 }
 
 const state = {

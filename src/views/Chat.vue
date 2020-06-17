@@ -7,7 +7,9 @@
         class="userPicture"
       />
       <h4 class="userName">Dirk Willems</h4>
-      <i class="fas fa-times fa-2x back-btn"></i>
+      <a href="javascript:history.go(-1)">
+        <i class="fas fa-times fa-2x back-btn"></i>
+      </a>
     </div>
 
     <div id="messagebox">
