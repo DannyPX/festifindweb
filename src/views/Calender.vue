@@ -13,12 +13,14 @@
           <div class="event-date">
             <p><i class="fa fa-calendar">{{ festival.startDate }}</i></p>
           </div>
-          <div class="event-img">
-            <img class="festivalImage" src="../assets/maxresdefault.jpg" />
-          </div>
-          <div class="event-title">
-            <p>{{ festival.name }}</p>
-          </div>
+          <router-link :to="`/festival/${festival.id}`">
+            <div class="event-img">
+              <img class="festivalImage" src="../assets/maxresdefault.jpg" />
+            </div>
+            <div class="event-title">
+              <p>{{ festival.name }}</p>
+            </div>
+          </router-link>
         </div>
       </li>
       <!-- <li v-for="index in 20" :key="index">

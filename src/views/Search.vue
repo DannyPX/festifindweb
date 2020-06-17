@@ -24,10 +24,16 @@
         <li v-for="index in 22" :key="index">
           <router-link :to="{ name: 'Home' }">
           <div class="result">
-                  
+            <img
+            src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
+            class="search-img"
+            />
             <div class="result-text">
               <p>Peter Jansen</p>
             </div>
+            <p class="bio">
+            Ik ben Peter, ik hou van alle soorten muziek
+            </p>
           </div>
           </router-link>     
         </li>
@@ -55,7 +61,17 @@ export default {
 </script>
 
 <style>
+.bio{
+  color: black;
+}
 
+.search-img{
+  background-color: #dbdbdb;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 24px;
+}
 
 .search-container {
   position: fixed;
@@ -67,10 +83,10 @@ export default {
 }
 
 .result{
-  width: 85%;
+  width: 90%;
   padding: 4px;
   border-radius: 14px;
-  height: 52px;
+  height: 152px;
   background-color: white;
   margin: 0 0 8px 0;
   box-shadow: 6px 6px 4px 2px rgba(0, 0, 255, 0.1);
@@ -79,5 +95,11 @@ export default {
 .result-text{
   color: black;
   text-decoration: none;
+  margin-left: 60px;
+  margin-top: 8px;
+  font-family: "Nunito Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
 }
 </style>

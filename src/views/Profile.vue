@@ -14,23 +14,13 @@
         </a>
       </div>
 
-      <h5 class="username">Dirk Willems</h5>
-      <p class="bio">
-        Gezellige Brabantse jongen, ik hou van alle soorten muziek
-      </p>
+      <h5 class="username">{{credentials.name}}</h5>
+      <p class="bio">{{credentials.bio}}</p>
 
-      <div
-        id="carouselExampleCaptions"
-        class="carousel slide carouselslide"
-        data-ride="carousel"
-      >
+      <div id="carouselExampleCaptions" class="carousel slide carouselslide" data-ride="carousel">
         <ol class="carousel-indicators">
           <!-- First Image -->
-          <li
-            data-target="#carouselExampleCaptions"
-            data-slide-to="0"
-            class="active"
-          ></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
           <!-- Other Images -->
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         </ol>
@@ -76,41 +66,25 @@
 
       <div class="festivals">
         <div class="festival card">
-          <img
-            class="card-img-top"
-            src="../assets/maxresdefault.jpg"
-            alt="Card image cap"
-          />
+          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
           </div>
         </div>
         <div class="festival card">
-          <img
-            class="card-img-top"
-            src="../assets/maxresdefault.jpg"
-            alt="Card image cap"
-          />
+          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
           </div>
         </div>
         <div class="festival card">
-          <img
-            class="card-img-top"
-            src="../assets/maxresdefault.jpg"
-            alt="Card image cap"
-          />
+          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
           </div>
         </div>
         <div class="festival card">
-          <img
-            class="card-img-top"
-            src="../assets/maxresdefault.jpg"
-            alt="Card image cap"
-          />
+          <img class="card-img-top" src="../assets/maxresdefault.jpg" alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title festivalTitle">Awakenings Festival 2020</h5>
           </div>
@@ -121,18 +95,24 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
+  computed: {
+    ...mapGetters(["credentials"])
+  },
   methods: {
     //Function to attend/unattend festival
-    change: function () {
+    change: function() {
       var elem = document.getElementById("friendIcon");
       if (elem.className == "fas fa-user-plus fa-3x friendIcon")
         elem.className = "fas fa-user-check fa-3x friendIcon";
       else elem.className = "fas fa-user-plus fa-3x friendIcon";
-    },
+    }
   },
-  mounted() {},
-  created() {},
+  mounted() {
+    this.$store.dispatch("refreshAccountDetails");
+  },
+  created() {}
 };
 </script>
 

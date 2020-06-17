@@ -11,6 +11,11 @@ const menuType = {
   ],
   withAuth: [
     {
+      href: "/profile",
+      title: "Profile",
+      icon: "fa fa-user"
+    },
+    {
       href: "/home",
       title: "Home",
       icon: "fa fa-home",
