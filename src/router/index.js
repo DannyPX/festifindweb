@@ -106,6 +106,11 @@ const routes = [
     name: "Nearby",
     component: () => import("../views/Nearby.vue"),
   },
+  {
+    path: "/friendRequests",
+    name: "FriendRequests",
+    component: () => import("../views/FriendRequests.vue"),
+  },
 ];
 
 const router = new VueRouter({

@@ -25,9 +25,7 @@
             class="profilePicture"
           />
           <i class="fas fa-check checkmark" id="1" style="display:none"></i>
-          <div class="userinfo">
             <h5 class="username">Username</h5>
-          </div>
         </div>
 </a>
 
@@ -38,9 +36,7 @@
             class="profilePicture"
           />
           <i class="fas fa-check checkmark" id="2" style="display:none"></i>
-          <div class="userinfo">
             <h5 class="username">Username</h5>
-          </div>
         </div>
 </a>
 
@@ -136,8 +132,9 @@ a {
   width: auto;
 }
 .profilePicture,
-.userinfo{
+.username{
   display: inline-block;
+  float: left;
 }
 
 .profilePicture, .groupIcon {
@@ -159,11 +156,15 @@ a {
 }
 
 .username {
+  margin-left: 10px;
   font-family: "Nunito Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 40px;
+  width: calc(100% - 50px);
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .userinfo {
