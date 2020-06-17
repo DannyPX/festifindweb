@@ -6,6 +6,7 @@ import menu from "./modules/menu";
 import Search from "./modules/Search";
 import festival from "./modules/festival";
 import friend from "./modules/friend";
+import profile from "./modules/profile"
 
 Vue.use(Vuex);
 
@@ -16,7 +17,8 @@ const store = new Vuex.Store({
     menu,
     festival,
     Search,
-    friend
+    friend,
+    profile
   }
 });
 
