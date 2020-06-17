@@ -21,6 +21,9 @@ const mutations = {
   },
   SET_OUTGOINGREQUESTS(state, data) {
     state.outgoingRequests = data
+  },
+  CLEAN_LIST(state) {
+    state.friends = []
   }
 };
 

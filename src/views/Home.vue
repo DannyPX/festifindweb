@@ -70,6 +70,7 @@ export default {
   },
   mounted () {
     this.$store.dispatch('getFestivals')
+    this.$store.dispatch('refreshAccountDetails')
   }
 }
 </script>

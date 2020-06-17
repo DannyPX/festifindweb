@@ -29,23 +29,42 @@
         </div>
       </router-link>
       <!-- Als user een individuele chat wilt aanmaken wilt aanmaken -->
-      <a>
+      <button v-for="friend in friends" :key="friend.id" @click="createChat({id: friend.id, name: friend.name})">
       <div class="friend">
         <img
           src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
           class="profilePicture"
         />
         <div class="userinfo">
-          <h5 class="username">Username</h5>
+          <h5 class="username">{{ friend.name }}</h5>
         </div>
       </div>
-      </a>
-
+      </button>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  computed: {
+    ...mapGetters(["friends"])
+  },
+  mounted() {
+    let _this = this
+    _this.$store.commit("CLEAN_LIST")
+    _this.$store.dispatch("getFriends").then(() => {
+      _this.$store.dispatch("getFriendDetails")
+    })
+  },
+  methods: {
+    createChat(data) {
+      this.$store.dispatch("createChat", data)
+    }
+  }
+}
+</script>
 
 <style scoped>
 .fillright {

@@ -2,19 +2,20 @@
   <div id="content">
     <h1 class="title">Berichten</h1>
     <div class="chatlist">
-      <!-- <a href="/Profile">
+      <router-link v-for="chat in chats" :key="chat.id" :to="`/chat/${chat.id}`">
         <div class="chat">
           <img
             src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
             class="profilePicture"
           />
           <div class="chatinfo">
-            <h5 class="chatname">Dirk Willems</h5>
-            <p class="message">Ging jij nog naar Awakenings?</p>
+            <h5 class="chatname">{{ chat.name }}</h5>
+            <p v-if="chat.messages.length != 0" class="message">{{ chat.message[0].text }}</p>
+            <p v-else class="message">Test</p>
           </div>
           <i class="far fa-comment-dots fa-3x chatIcon"></i>
         </div>
-      </a> -->
+      </router-link>
     </div>
     <router-link to="/createchat">
     <i class="fa fa-plus fa-2x addIcon"></i>
@@ -22,7 +23,17 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import { mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapGetters(["chats"])
+  },
+  mounted() {
+    this.$store.dispatch("getChats")
+  }
+}
+</script>
 
 <style scoped>
 a {
