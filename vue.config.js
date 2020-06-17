@@ -3,7 +3,7 @@ const manifestJSON = require("./public/img/icons/manifest.json");
 module.exports = {
   devServer: {
     https: true,
-    public: "https://localhost:8080/",
+    public: "https://festifind-wpa.herokuapp.com/",
   },
   pwa: {
     themeColor: manifestJSON.theme_color,

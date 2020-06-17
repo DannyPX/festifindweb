@@ -5,7 +5,7 @@
   "background_color": "#17171d",
   "display": "standalone",
   "Scope": "/",
-  "start_url": "",
+  "start_url": "https://festifind-wpa.herokuapp.com/",
   "splash_pages": null,
   "icons": [
       {

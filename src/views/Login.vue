@@ -25,6 +25,7 @@ export default {
           autoLogAppEvents: true,
           xfbml: true,
           version: "v7.0",
+          channelURL: "https://festifind-wpa.herokuapp.com/"
         });
         window.FB.AppEvents.logPageView();
         _this.FB = window.FB;
