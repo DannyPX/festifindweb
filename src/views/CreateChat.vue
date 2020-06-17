@@ -22,10 +22,8 @@
       <!-- Als user een groepschat wilt aanmaken -->
       <router-link to="/creategroup">
         <div class="friend">
-          <i class="fas fa-users groupIcon"></i>
-          <div class="userinfo">
+          <i class="fas fa-users groupIcon profilePicture"></i>
             <h5 class="username">Groep</h5>
-          </div>
         </div>
       </router-link>
       <!-- Als user een individuele chat wilt aanmaken wilt aanmaken -->
@@ -35,9 +33,7 @@
           src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
           class="profilePicture"
         />
-        <div class="userinfo">
-          <h5 class="username">Username</h5>
-        </div>
+          <h5 class="username">Jan Willems</h5>
       </div>
       </a>
 
@@ -84,8 +80,9 @@ a {
   width: auto;
 }
 .profilePicture,
-.userinfo {
+.username {
   display: inline-block;
+  float: left;
 }
 
 .profilePicture,
@@ -107,16 +104,16 @@ a {
 }
 
 .username {
+  margin-left: 10px;
   font-family: "Nunito Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 40px;
-}
-
-.userinfo {
-  margin-left: 5%;
-  width: 60%;
+  max-width: calc(100% - 50px);
+  overflow: hidden;
+  max-height: 40px;
+  text-overflow: ellipsis;
 }
 
 .addIcon {
