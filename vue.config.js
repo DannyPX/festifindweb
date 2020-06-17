@@ -1,3 +1,5 @@
+const manifestJSON = require("./public/img/icons/manifest.json");
+
 module.exports = {
   devServer: {
     https: true,
