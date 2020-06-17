@@ -1,55 +1,82 @@
 <template>
   <div id="content">
     <h1 class="title">Vrienden</h1>
+
     <div class="friendlist">
       <a href="/Profile">
-        <div class="friend">
+        <div class="friend" v-for="i in 20" :key="i">
           <img
             src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
             class="profilePicture"
           />
-          <div class="userinfo">
-            <h5 class="username">Username</h5>
-            <p class="message">Ging jij nog naar Awakenings?</p>
+        <div class="requestContent">
+          <h5 class="username">Dirk Willems</h5>
+          <br>
+          <button class="btn btn-primary">Bevestigen</button>
+          <button class="btn btn-light">Verwijderen</button>
           </div>
-          <i class="far fa-comment-dots fa-3x chatIcon"></i>
         </div>
       </a>
     </div>
-    <i class="fa fa-plus fa-2x addIcon"></i>
   </div>
 </template>
 
 <script></script>
 
 <style scoped>
+.title{
+  margin-bottom: 30px;
+}
+.btn{
+  margin-right: 5px;
+display: inline-block;
+  text-align: center;
+  background: #065bff;
+  border-radius: 10px;
+
+  font-family: "Nunito Regular";
+  font-style: normal;
+  font-weight: normal;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.btn-light{
+  background: white;
+  color: #065bff;
+}
+
+.requestContent{
+  display: inline;
+margin-left: 20px;
+float: left;
+}
+
 a {
   color: black;
 }
 
 .friendlist {
   overflow: auto;
-  max-height: calc(100% - 124px);
+  max-height: calc(100% - 84px);
 }
 .friend {
-  margin-bottom: 29px;
+  margin-bottom: 40px;
   height: 45px;
   width: auto;
 }
 .profilePicture,
-.userinfo,
-.chatIcon {
+.username {
   display: inline;
   float: left;
 }
 
-.chatIcon {
-  float: right;
-}
 .profilePicture {
-  width: 45px;
-  height: 45px;
-  border: 2px solid black;
+  width: 55px;
+  height: 55px;
+  border: 2px solid white;
   border-radius: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: inline-block;
@@ -60,29 +87,8 @@ a {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 15px;
+  
 }
 
-.message {
-  margin-top: -5px;
-  font-family: "Nunito Regular";
-  font-style: normal;
-  font-size: 13px;
-  line-height: 18px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 90%;
-  max-height: 25px;
-}
-
-.userinfo {
-  margin-left: 5%;
-  width: 60%;
-}
-
-.addIcon {
-  bottom: 18px;
-  position: absolute;
-}
 </style>
