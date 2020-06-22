@@ -6,7 +6,7 @@
         src="../assets/blank-profile-picture-973460_1280-1-e1546851120685.png"
         class="userPicture"
       />
-      <h4 class="userName">Dirk Willems</h4>
+      <h4 class="userName">Bram C</h4>
       <a href="javascript:history.go(-1)">
         <i class="fas fa-times fa-2x back-btn"></i>
       </a>

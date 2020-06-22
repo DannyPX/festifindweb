@@ -11,7 +11,7 @@
           <div class="chatinfo">
             <h5 class="chatname">{{ chat.name }}</h5>
             <p v-if="chat.messages.length != 0" class="message">{{ chat.message[0].text }}</p>
-            <p v-else class="message">Test</p>
+            <p v-else class="message">Helluuu</p>
           </div>
           <i class="far fa-comment-dots fa-3x chatIcon"></i>
         </div>
